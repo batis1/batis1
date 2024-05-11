@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://batis1.github.io/sitemap.xml
+Sitemap: https://batis1.github.io/batis1/sitemap.xml
