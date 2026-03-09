@@ -1,15 +1,41 @@
 <script lang="ts">
 	const profile = {
 		name: 'Mohammed Batis',
-		title: 'MSc Computer Science and Technology',
+		subtitle: 'ML researcher',
 		location: 'Wenzhou University, Wenzhou, China',
-		email: 'Batis2019@gmail.com',
+		email: 'batis2019@gmail.com',
 		phone: '(+86) 15658563280',
 		cv: './mainCV.pdf',
 		github: 'https://github.com/batis1',
 		scholar: 'https://scholar.google.com/citations?user=7lz2lbUAAAAJ&hl=en',
 		image: './profile_picture.jpg'
 	};
+
+	const education = [
+		{
+			date: '2022 - 2025',
+			degree: 'MSc Computer Science and Technology',
+			school: 'Wenzhou University',
+			location: 'Wenzhou, China',
+			detail:
+				'Final grade: 4.5. Thesis: Research on the Improved RIME Optimization Algorithm and Its Application for Wrapper-based Feature Selection in Biomedical Data.'
+		},
+		{
+			date: '2018 - 2022',
+			degree: 'BSc Computer Science and Technology',
+			school: 'Wenzhou University',
+			location: 'Wenzhou, China',
+			detail:
+				'Final grade: 4.03 GPA. Thesis: Design and Implementation of a Chinese HSK Test Preparation Platform.'
+		},
+		{
+			date: '2014 - 2017',
+			degree: 'Secondary School',
+			school: 'Mukalla Model Secondary School',
+			location: 'Mukalla, Yemen',
+			detail: 'Final grade: 98.63%.'
+		}
+	];
 
 	const publications = [
 		{
@@ -40,45 +66,56 @@
 		}
 	];
 
-	const education = [
+	const projects = [
 		{
-			period: '2022 - 2025',
-			degree: 'MSc Computer Science and Technology',
-			school: 'Wenzhou University',
+			date: '2022 - Present',
+			title: 'WHSK: Interactive HSK Preparation Platform',
 			detail:
-				'Thesis: Research on the Improved RIME Optimization Algorithm and Its Application for Wrapper-based Feature Selection in Biomedical Data'
-		},
-		{
-			period: '2018 - 2022',
-			degree: 'BSc Computer Science and Technology',
-			school: 'Wenzhou University',
-			detail: 'Thesis: Design and Implementation of a Chinese HSK Test Preparation Platform'
-		},
-		{
-			period: '2014 - 2017',
-			degree: 'Secondary School',
-			school: 'Mukalla Model Secondary School',
-			detail: 'Graduated with 98.63%'
+				'A gamified web platform for Chinese HSK preparation with interactive practice, progress tracking, and software copyright registration in China (2025SR0444242).',
+			link: 'https://whsk.tech/'
 		}
 	];
 
-	const achievements = [
-		'Chinese Government Scholarship at Wenzhou University',
-		'Excellent Graduation Design Award at Wenzhou University',
-		'Zhejiang Government Scholarship at Wenzhou University',
-		'Second Place in Mukalla Model Secondary School Rankings',
-		'9th Best Middle School Graduate in the Province of Wadi Hadramout'
+	const awards = [
+		{
+			date: '2022',
+			title: 'Chinese Government Scholarship at Wenzhou University'
+		},
+		{
+			date: '2022',
+			title: 'Excellent Graduation Design Award at Wenzhou University'
+		},
+		{
+			date: '2021',
+			title: 'Zhejiang Government Scholarship at Wenzhou University'
+		},
+		{
+			date: '2017',
+			title: 'Second Place in Mukalla Model Secondary School Rankings'
+		},
+		{
+			date: '2013',
+			title: '9th Best Middle School Graduate in the Province of Wadi Hadramout'
+		}
 	];
 
-	const skills = [
-		'Python',
-		'PyTorch',
-		'React',
-		'Node.js',
-		'MongoDB',
-		'MySQL',
-		'MATLAB',
-		'Git and GitHub'
+	const skillGroups = [
+		{
+			category: 'Programming and ML',
+			skills: 'Python, PyTorch, MATLAB'
+		},
+		{
+			category: 'Web and Software',
+			skills: 'React, Svelte, D3.js, Node.js, MongoDB, MySQL'
+		},
+		{
+			category: 'Tools',
+			skills: 'Git and GitHub'
+		},
+		{
+			category: 'Languages',
+			skills: 'Arabic, English, Chinese'
+		}
 	];
 </script>
 
@@ -86,189 +123,116 @@
 	<title>Mohammed Batis - Machine learning</title>
 	<meta
 		name="description"
-		content="Academic CV website for Mohammed Batis, focused on mechanistic interpretability and trustworthy AI."
+		content="Academic CV website for Mohammed Batis, focused on mechanistic interpretability, ML visualizations, and trustworthy AI."
+	/>
+	<link rel="stylesheet" href="https://use.typekit.net/qyo6xht.css" />
+	<link
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+		rel="stylesheet"
 	/>
 </svelte:head>
 
-<div class="page-shell">
-	<div class="ambient ambient-left"></div>
-	<div class="ambient ambient-right"></div>
+<main id="cv">
+	<h1 id="cv-title"><a href="./">Mohammed Batis</a></h1>
 
-	<header class="topbar">
-		<div class="brand">Home</div>
-		<nav>
-			<a href="#publications">Publications</a>
-			<a href="#projects">Projects</a>
-			<a href="#education">Education</a>
-			<a href="#contact">Contact</a>
-		</nav>
-	</header>
+	<div class="cv-image-links-wrapper">
+		<div class="cv-headshot">
+			<img src={profile.image} alt={profile.name} />
+		</div>
 
-	<main class="layout">
-		<section class="hero-card">
-			<div class="hero-layout">
-				<div class="hero-copy">
-					<h1>Reverse engineering artificial neural networks into human understandable algorithms.</h1>
-
-					<div class="hero-visual" aria-hidden="true">
-						<div class="meaning-space">
-							<div class="network-stack">
-								<div class="layer layer-a">
-									<span class="neuron"></span>
-									<span class="neuron"></span>
-									<span class="neuron"></span>
-									<span class="neuron"></span>
-								</div>
-								<div class="layer layer-b">
-									<span class="neuron"></span>
-									<span class="neuron"></span>
-									<span class="neuron"></span>
-									<span class="neuron"></span>
-									<span class="neuron"></span>
-								</div>
-								<div class="layer layer-c">
-									<span class="neuron"></span>
-									<span class="neuron"></span>
-									<span class="neuron"></span>
-									<span class="neuron"></span>
-								</div>
-							</div>
-
-							<div class="connection-web web-a"></div>
-							<div class="connection-web web-b"></div>
-
-							<div class="interpret-core">
-								<div class="interpret-ring"></div>
-								<div class="interpret-dot"></div>
-							</div>
-
-							<div class="flow-lane flow-lane-a"></div>
-							<div class="flow-lane flow-lane-b"></div>
-							<div class="flow-lane flow-lane-c"></div>
-
-							<div class="algorithm-card">
-								<div class="algorithm-chip"></div>
-								<div class="rule-line rule-line-a"></div>
-								<div class="rule-line rule-line-b"></div>
-								<div class="rule-line rule-line-c"></div>
-								<div class="rule-line rule-line-d"></div>
-								<div class="algorithm-badge"></div>
-							</div>
-						</div>
-					</div>
-
-					<p class="lede">
-						My research interests lie in mechanistic interpretability, ML visualizations, and
-						trustworthy AI.
-					</p>
-
-					<div class="hero-actions">
-						<a class="button primary" href={profile.cv} target="_blank" rel="noreferrer"
-							>Download CV</a
-						>
-						<a class="button secondary" href={profile.github} target="_blank" rel="noreferrer">
-							GitHub
-						</a>
-						<a class="button secondary" href={profile.scholar} target="_blank" rel="noreferrer">
-							Google Scholar
-						</a>
-					</div>
+		<div class="cv-image-links">
+			<div class="cv-social-link">
+				<div class="cv-social-link-icon-wrapper"><i class="fas fa-home icon"></i></div>
+				<div class="cv-social-link-text-wrapper">{profile.location}</div>
+			</div>
+			<div class="cv-social-link">
+				<div class="cv-social-link-icon-wrapper"><i class="fas fa-envelope icon"></i></div>
+				<div class="cv-social-link-text-wrapper">
+					<a href={`mailto:${profile.email}`}>{profile.email}</a>
 				</div>
-
 			</div>
-		</section>
-
-		<aside class="profile-card" id="contact">
-			<img class="portrait" src={profile.image} alt={profile.name} />
-			<h2>{profile.name}</h2>
-			<p>{profile.title}</p>
-
-			<ul class="contact-list">
-				<li>{profile.location}</li>
-				<li><a href={`mailto:${profile.email}`}>{profile.email}</a></li>
-				<li>{profile.phone}</li>
-			</ul>
-		</aside>
-
-		<section class="content-card" id="publications">
-			<p class="section-label">Publications</p>
-
-			<div class="timeline">
-				{#each publications as publication}
-					<article>
-						<div class="timeline-year">{publication.year}</div>
-						<div>
-							<h3>
-								{#if publication.link}
-									<a href={publication.link} target="_blank" rel="noreferrer">{publication.title}</a>
-								{:else}
-									{publication.title}
-								{/if}
-							</h3>
-							<p>{publication.venue}</p>
-							<span>{publication.status}</span>
-						</div>
-					</article>
-				{/each}
+			<div class="cv-social-link">
+				<div class="cv-social-link-icon-wrapper"><i class="far fa-file-pdf icon"></i></div>
+				<div class="cv-social-link-text-wrapper"><a href={profile.cv}>CV PDF</a></div>
 			</div>
-		</section>
+		</div>
 
-		<section class="content-card" id="projects">
-			<p class="section-label">Projects</p>
-
-			<article class="project-card">
-				<div>
-					<p class="project-period">2022 - Present</p>
-					<h3>WHSK: Interactive HSK Preparation Platform</h3>
-					<p>
-						A gamified web platform for Chinese HSK preparation with interactive practice,
-						progress tracking, and software copyright registration in China
-						(2025SR0444242).
-					</p>
+		<div class="cv-image-links">
+			<div class="cv-social-link">
+				<div class="cv-social-link-icon-wrapper"><i class="fab fa-github icon"></i></div>
+				<div class="cv-social-link-text-wrapper"><a href={profile.github}>@batis1</a></div>
+			</div>
+			<div class="cv-social-link">
+				<div class="cv-social-link-icon-wrapper"><i class="fas fa-phone icon"></i></div>
+				<div class="cv-social-link-text-wrapper">{profile.phone}</div>
+			</div>
+			<div class="cv-social-link">
+				<div class="cv-social-link-icon-wrapper">
+					<i class="fa fa-graduation-cap icon"></i>
 				</div>
-				<a href="https://whsk.tech/" target="_blank" rel="noreferrer">whsk.tech</a>
-			</article>
-		</section>
-
-		<section class="content-card" id="education">
-			<p class="section-label">Education</p>
-
-			<div class="stack-list">
-				{#each education as item}
-					<article>
-						<p class="stack-period">{item.period}</p>
-						<h3>{item.degree}</h3>
-						<p>{item.school}</p>
-						<span>{item.detail}</span>
-					</article>
-				{/each}
+				<div class="cv-social-link-text-wrapper">
+					<a href={profile.scholar}>Google Scholar</a>
+				</div>
 			</div>
-		</section>
+		</div>
+	</div>
 
-		<section class="content-card">
-			<p class="section-label">Awards and scholarships</p>
+	<div class="cv-intro">
+		My research focuses on making <strong class="cv-ai">machine learning</strong> models more
+		<strong class="cv-ai-2">interpretable</strong> and <strong class="cv-ai-2">trustworthy</strong>
+		through <strong class="cv-vis">ML visualizations</strong> and mechanistic understanding.
+	</div>
 
-			<ul class="pill-list">
-				{#each achievements as achievement}
-					<li>{achievement}</li>
-				{/each}
-			</ul>
-		</section>
+	<hr />
 
-		<section class="content-card">
-			<p class="section-label">Skills</p>
+	<h2 id="education">Education</h2>
+	{#each education as item}
+		<div class="cv-left-date">{item.date}</div>
+		<b>{item.degree}</b>
+		<div>{item.school}, {item.location}</div>
+		<div class="cv-description">{item.detail}</div>
+		<div class="cv-spacer"></div>
+	{/each}
 
-			<ul class="pill-list compact">
-				{#each skills as skill}
-					<li>{skill}</li>
-				{/each}
-				<li>Arabic</li>
-				<li>English</li>
-				<li>Chinese</li>
-			</ul>
-		</section>
-	</main>
-</div>
+	<h2 id="publications">Publications</h2>
+	{#each publications as publication}
+		<div class="cv-left-date">{publication.year}</div>
+		<div>
+			{#if publication.link}
+				<a href={publication.link}><b>{publication.title}</b></a>
+			{:else}
+				<b>{publication.title}</b>
+			{/if}
+		</div>
+		<div class="cv-description"><i>{publication.venue}. {publication.status}.</i></div>
+		<div class="cv-spacer-large"></div>
+	{/each}
+
+	<h2 id="projects">Projects</h2>
+	{#each projects as project}
+		<div class="cv-left-date">{project.date}</div>
+		<div><a href={project.link}><b>{project.title}</b></a></div>
+		<div class="cv-description">{project.detail}</div>
+		<div class="pub-misc">
+			<a href={project.link}>Project link</a>
+		</div>
+		<div class="cv-spacer"></div>
+	{/each}
+
+	<h2 id="honors-and-awards">Honors and Awards</h2>
+	{#each awards as award}
+		<div class="cv-left-date">{award.date}</div>
+		<div>{award.title}</div>
+		<div class="cv-spacer-small"></div>
+	{/each}
+
+	<h2 id="technology-skills">Technology Skills</h2>
+	{#each skillGroups as group}
+		<p style="margin: 5px 0">
+			<strong>{group.category}:</strong> {group.skills}
+		</p>
+	{/each}
+</main>
 
 <style>
 	:global(html) {
@@ -277,12 +241,14 @@
 
 	:global(body) {
 		margin: 0;
-		font-family: 'Manrope', sans-serif;
-		color: #10231d;
-		background:
-			radial-gradient(circle at top left, rgba(217, 145, 71, 0.2), transparent 28rem),
-			radial-gradient(circle at bottom right, rgba(25, 107, 84, 0.16), transparent 24rem),
-			linear-gradient(180deg, #f6f1e8 0%, #f3efe7 45%, #efe8dc 100%);
+		background: #fff;
+		color: #414141;
+		font-family:
+			-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+	}
+
+	:global(*) {
+		box-sizing: border-box;
 	}
 
 	:global(a) {
@@ -290,679 +256,233 @@
 		text-decoration: none;
 	}
 
-	.page-shell {
-		position: relative;
-		min-height: 100vh;
-		padding: 1.5rem;
-		overflow: hidden;
-	}
-
-	.ambient {
-		position: absolute;
-		border-radius: 999px;
-		filter: blur(18px);
-		opacity: 0.55;
-		pointer-events: none;
-	}
-
-	.ambient-left {
-		top: 6rem;
-		left: -4rem;
-		width: 16rem;
-		height: 16rem;
-		background: rgba(227, 139, 52, 0.28);
-	}
-
-	.ambient-right {
-		right: -5rem;
-		bottom: 8rem;
-		width: 18rem;
-		height: 18rem;
-		background: rgba(16, 83, 67, 0.2);
-	}
-
-	.topbar,
-	.layout {
-		position: relative;
-		z-index: 1;
-	}
-
-	.topbar {
-		max-width: 1180px;
-		margin: 0 auto 1.5rem;
-		padding: 0.9rem 1rem;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		backdrop-filter: blur(18px);
-		background: rgba(255, 251, 245, 0.62);
-		border: 1px solid rgba(16, 35, 29, 0.08);
-		border-radius: 999px;
-	}
-
-	.brand {
-		font-weight: 800;
-		letter-spacing: 0.04em;
-		text-transform: uppercase;
-		font-size: 0.82rem;
-	}
-
-	nav {
-		display: flex;
-		gap: 1.2rem;
-		font-size: 0.95rem;
-	}
-
-	.layout {
-		max-width: 1180px;
-		margin: 0 auto;
+	main#cv {
+		font-family:
+			-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 		display: grid;
-		grid-template-columns: minmax(0, 1.65fr) minmax(280px, 0.8fr);
-		gap: 1.25rem;
+		justify-items: stretch;
+		grid-template-columns:
+			[screen-start] 1fr
+			[page-start kicker-start] minmax(min-content, 3.5rem)
+			[middle-start] minmax(min-content, 3.5rem)
+			[text-start kicker-end] repeat(8, minmax(min-content, 3.5rem))
+			[text-end gutter-start] minmax(min-content, 3.5rem)
+			[middle-end] minmax(min-content, 3.5rem)
+			[page-end gutter-end] 1fr
+			[screen-end];
+		grid-column-gap: 1.5rem;
+		padding-top: 1rem;
+		padding-bottom: 3rem;
+		line-height: 1.5;
+		color: #414141;
+		-webkit-font-smoothing: antialiased;
 	}
 
-	.hero-card,
-	.profile-card,
-	.content-card {
-		backdrop-filter: blur(14px);
-		background: rgba(255, 252, 247, 0.72);
-		border: 1px solid rgba(16, 35, 29, 0.09);
-		border-radius: 2rem;
-		box-shadow: 0 22px 60px rgba(51, 43, 28, 0.08);
+	main#cv > * {
+		grid-column: text-start / page-end;
 	}
 
-	.hero-card {
-		padding: 2.5rem;
-		min-height: 28rem;
-		display: flex;
-		align-items: center;
+	main#cv h1 {
+		font-size: 2.25rem;
+		margin-top: 1rem;
+		line-height: 1.25;
 	}
 
-	.hero-layout {
-		width: 100%;
-		display: block;
+	main#cv h2 {
+		font-size: 2rem;
+		margin-top: 1rem;
+		margin-bottom: 0.5rem;
+		font-weight: 400;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		padding-bottom: 0.35rem;
 	}
 
-	.hero-copy {
-		position: relative;
-		z-index: 1;
-		max-width: 52rem;
+	main#cv hr {
+		margin: 1.5rem 0;
+		border: 0;
+		border-top: 1px solid #ddd;
 	}
 
-	.hero-visual {
-		position: relative;
-		min-height: 28rem;
-		margin: -1.4rem 0 0.6rem;
-		display: grid;
-		place-items: center;
-		perspective: 1200px;
-		z-index: 0;
-	}
-
-	.meaning-space {
-		position: relative;
-		width: min(100%, 52rem);
-		aspect-ratio: 1.7 / 1;
-		transform-style: preserve-3d;
-		animation: sceneFloat 9s ease-in-out infinite;
-		opacity: 0.96;
-	}
-
-	.network-stack,
-	.connection-web,
-	.interpret-core,
-	.flow-lane,
-	.algorithm-card {
-		position: absolute;
-		transform-style: preserve-3d;
-	}
-
-	.network-stack {
-		left: 2.2rem;
-		top: 3.2rem;
-		width: 34%;
-		height: 76%;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		align-items: center;
-		z-index: 2;
-	}
-
-	.layer {
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-evenly;
-	}
-
-	.neuron {
-		width: 0.9rem;
-		height: 0.9rem;
-		border-radius: 50%;
-		background: radial-gradient(circle at 35% 35%, #fff6e3 0%, #dea45d 45%, #103f36 100%);
-		box-shadow:
-			0 0 0 8px rgba(255, 252, 247, 0.26),
-			0 0 22px rgba(222, 164, 93, 0.32);
-		animation: neuronPulse 3.2s ease-in-out infinite;
-	}
-
-	.layer-a .neuron:nth-child(2),
-	.layer-b .neuron:nth-child(4),
-	.layer-c .neuron:nth-child(1) {
-		animation-delay: -0.8s;
-	}
-
-	.layer-a .neuron:nth-child(4),
-	.layer-b .neuron:nth-child(2),
-	.layer-c .neuron:nth-child(3) {
-		animation-delay: -1.5s;
-	}
-
-	.connection-web {
-		top: 4.8rem;
-		left: 5.4rem;
-		width: 27%;
-		height: 60%;
-		border-radius: 1.5rem;
-		background:
-			linear-gradient(26deg, transparent 16%, rgba(16, 63, 54, 0.12) 17%, transparent 18%),
-			linear-gradient(-18deg, transparent 24%, rgba(16, 63, 54, 0.1) 25%, transparent 26%),
-			linear-gradient(12deg, transparent 48%, rgba(222, 164, 93, 0.16) 49%, transparent 50%);
-		opacity: 0.9;
-	}
-
-	.web-a {
-		transform: skewY(-10deg);
-	}
-
-	.web-b {
-		transform: translateX(1rem) scale(0.92);
-		opacity: 0.55;
-	}
-
-	.interpret-core {
-		left: 47%;
-		top: 50%;
-		width: 7.4rem;
-		height: 7.4rem;
-		transform: translate(-50%, -50%);
-		display: grid;
-		place-items: center;
-		z-index: 3;
-	}
-
-	.interpret-ring,
-	.interpret-dot {
-		position: absolute;
-		border-radius: 50%;
-	}
-
-	.interpret-ring {
-		inset: 0;
-		border: 1px solid rgba(16, 63, 54, 0.16);
-		box-shadow:
-			inset 0 0 18px rgba(16, 63, 54, 0.08),
-			0 0 32px rgba(222, 164, 93, 0.2);
-		animation: ringSpin 8s linear infinite;
-	}
-
-	.interpret-ring::before,
-	.interpret-ring::after {
-		content: '';
-		position: absolute;
-		inset: 0;
-		border-radius: 50%;
-		border: 1px solid rgba(222, 164, 93, 0.24);
-	}
-
-	.interpret-ring::before {
-		transform: rotateX(72deg);
-	}
-
-	.interpret-ring::after {
-		transform: rotateY(72deg);
-	}
-
-	.interpret-dot {
-		inset: 30%;
-		background: radial-gradient(circle at 35% 35%, #fff5df 0%, #e7ab61 42%, #103f36 100%);
-		box-shadow:
-			0 0 0 14px rgba(16, 63, 54, 0.08),
-			0 0 28px rgba(222, 164, 93, 0.32);
-		animation: corePulse 3.8s ease-in-out infinite;
-	}
-
-	.flow-lane {
-		left: 51%;
-		width: 22%;
-		height: 0.46rem;
-		border-radius: 999px;
-		background: linear-gradient(90deg, rgba(222, 164, 93, 0.14), rgba(16, 63, 54, 0.16));
-		overflow: hidden;
-	}
-
-	.flow-lane::before {
-		content: '';
-		position: absolute;
-		inset: 0 auto 0 -36%;
-		width: 36%;
-		background: linear-gradient(90deg, transparent, rgba(255, 247, 231, 0.96), transparent);
-		animation: dataTravel 2.4s linear infinite;
-	}
-
-	.flow-lane-a {
-		top: 36%;
-	}
-
-	.flow-lane-b {
-		top: 49%;
-	}
-
-	.flow-lane-c {
-		top: 62%;
-	}
-
-	.algorithm-card {
-		right: 1rem;
-		top: 3.6rem;
-		width: 28%;
-		padding: 1.25rem;
-		border-radius: 1.35rem;
-		background:
-			linear-gradient(180deg, rgba(255, 252, 247, 0.92), rgba(244, 236, 226, 0.8)),
-			linear-gradient(135deg, rgba(16, 63, 54, 0.06), rgba(222, 164, 93, 0.08));
-		border: 1px solid rgba(16, 63, 54, 0.11);
-		box-shadow:
-			0 18px 36px rgba(16, 35, 29, 0.08),
-			inset 0 1px 0 rgba(255, 255, 255, 0.55);
-		z-index: 2;
-	}
-
-	.algorithm-chip,
-	.algorithm-badge {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		padding: 0.4rem 0.65rem;
-		border-radius: 999px;
-		font-size: 0.68rem;
-		font-weight: 800;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-	}
-
-	.algorithm-chip {
-		width: 6.6rem;
-		height: 1.65rem;
-		background: rgba(16, 63, 54, 0.08);
-		color: #103f36;
-	}
-
-	.algorithm-badge {
-		width: 5.8rem;
-		height: 1.5rem;
-		margin-top: 0.95rem;
-		background: rgba(222, 164, 93, 0.18);
-		color: #8a5b30;
-	}
-
-	.rule-line {
-		height: 0.62rem;
-		margin-top: 0.85rem;
-		border-radius: 999px;
-		background: linear-gradient(90deg, rgba(16, 63, 54, 0.18), rgba(222, 164, 93, 0.36));
-		transform-origin: left center;
-		animation: ruleReveal 3.6s ease-in-out infinite;
-	}
-
-	.rule-line-a {
-		width: 92%;
-	}
-
-	.rule-line-b {
-		width: 74%;
-		animation-delay: -0.5s;
-	}
-
-	.rule-line-c {
-		width: 84%;
-		animation-delay: -1s;
-	}
-
-	.rule-line-d {
-		width: 58%;
-		animation-delay: -1.5s;
-	}
-
-	.section-label,
-	.stack-period,
-	.project-period,
-	.timeline-year {
-		text-transform: uppercase;
-		letter-spacing: 0.12em;
-		font-size: 0.75rem;
-		font-weight: 800;
-		color: #8a5b30;
-	}
-
-	h1,
-	h2,
-	h3 {
-		font-family: 'Newsreader', serif;
-		margin: 0;
+	#cv-title {
 		font-weight: 600;
-	}
-
-	h1 {
-		margin-top: 0;
-		font-size: clamp(2.2rem, 5vw, 3.8rem);
 		line-height: 1;
-		max-width: 15ch;
+		font-size: 2.5rem;
+		letter-spacing: -0.08rem;
+		color: #1a1a1a;
+		margin-bottom: 0;
+		font-family: 'Akzidenz Grotesk', 'Newsreader', sans-serif;
 	}
 
-	h2 {
-		font-size: clamp(2rem, 4vw, 3rem);
-		line-height: 0.98;
-		margin-top: 0.35rem;
+	#cv-title a,
+	#cv-title a:hover {
+		color: #1a1a1a;
+		font-weight: 600;
+		text-decoration: none;
 	}
 
-	h3 {
-		font-size: 1.35rem;
-		line-height: 1.1;
+	.cv-intro {
+		margin-top: 0.75rem;
+		margin-bottom: 0.75rem;
+		line-height: 1.5;
 	}
 
-	h3 a {
-		text-decoration: underline;
-		text-decoration-thickness: 1px;
-		text-underline-offset: 0.14em;
+	.cv-ai,
+	.cv-ai-2,
+	.cv-vis {
+		border-radius: 1rem;
+		padding: 0 0.5rem;
 	}
 
-	.lede,
-	.content-card p,
-	.content-card span,
-	.profile-card p,
-	.profile-card li,
-	.project-card a {
-		line-height: 1.7;
-		font-size: 1rem;
-		color: rgba(16, 35, 29, 0.82);
+	.cv-ai {
+		background-color: #bbf6e2;
+		color: #36876c;
 	}
 
-	.hero-actions {
+	.cv-ai-2 {
+		background-color: #56b2e5;
+		color: white;
+	}
+
+	.cv-vis {
+		background-color: #ffd7f1;
+		color: #995081;
+	}
+
+	.cv-image-links-wrapper {
 		display: flex;
-		flex-wrap: wrap;
-		gap: 0.9rem;
-		margin: 1.5rem 0 0;
-	}
-
-	.button {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		padding: 0.95rem 1.25rem;
-		border-radius: 999px;
-		font-weight: 700;
-		transition:
-			transform 160ms ease,
-			background 160ms ease;
-	}
-
-	.button:hover {
-		transform: translateY(-2px);
-	}
-
-	.primary {
-		background: #103f36;
-		color: #f7f2ea;
-	}
-
-	.secondary {
-		background: rgba(16, 63, 54, 0.08);
-	}
-
-	.project-card,
-	.stack-list article,
-	.timeline article {
-		padding: 1rem 1.1rem;
-		background: rgba(255, 255, 255, 0.54);
-		border: 1px solid rgba(16, 35, 29, 0.08);
-		border-radius: 1.35rem;
-	}
-
-	.profile-card {
-		padding: 1.6rem;
-		align-self: start;
-		position: sticky;
-		top: 1.5rem;
-		display: flex;
-		flex-direction: column;
+		font-size: 0.85rem;
+		gap: 1.5rem;
 		align-items: flex-start;
 	}
 
-	.portrait {
-		width: min(100%, 15rem);
-		aspect-ratio: 1 / 1;
-		border-radius: 1.5rem;
+	.cv-headshot {
+		width: 120px;
+		flex: 0 0 120px;
+	}
+
+	.cv-headshot img {
+		width: 120px;
+		height: 120px;
 		object-fit: cover;
 		object-position: center top;
+		border-radius: 100%;
 		display: block;
-		margin-bottom: 1.25rem;
-		border: 1px solid rgba(16, 35, 29, 0.12);
 	}
 
-	.profile-card h2 {
-		font-size: 2.15rem;
+	.cv-image-links {
+		flex: 1;
 	}
 
-	.contact-list {
-		list-style: none;
-		padding: 0;
-		margin: 1.2rem 0;
-		display: grid;
-		gap: 0.7rem;
-	}
-
-	.content-card {
-		padding: 2rem;
-	}
-
-	.timeline,
-	.stack-list {
-		display: grid;
-		gap: 0.9rem;
-		margin-top: 1.3rem;
-	}
-
-	.timeline article {
-		display: grid;
-		grid-template-columns: 5rem 1fr;
-		gap: 1rem;
-		align-items: start;
-	}
-
-	.timeline p,
-	.stack-list p,
-	.project-card p {
-		margin: 0.45rem 0 0;
-	}
-
-	.timeline span,
-	.stack-list span {
-		display: inline-block;
-		margin-top: 0.55rem;
-		color: rgba(16, 35, 29, 0.72);
-	}
-
-	.project-card {
-		margin-top: 1.3rem;
+	.cv-social-link {
 		display: flex;
-		align-items: flex-start;
-		justify-content: space-between;
-		gap: 1rem;
+		margin-bottom: 0.2rem;
 	}
 
-	.project-card a {
-		font-weight: 800;
-		color: #103f36;
+	.cv-social-link-icon-wrapper {
+		flex: 0 0 25px;
+		text-align: center;
+		margin-right: 0.5rem;
 	}
 
-	.pill-list {
-		list-style: none;
-		padding: 0;
-		margin: 1.4rem 0 0;
+	.cv-social-link-icon-wrapper i {
+		color: #515151;
+	}
+
+	.cv-social-link-text-wrapper > a {
+		color: #414141;
+	}
+
+	.cv-left-date {
+		grid-column: kicker;
+		text-align: right;
+		font-size: 0.7rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		color: #666;
+	}
+
+	.cv-description {
+		color: #666;
+		font-size: 0.9rem;
+		font-weight: 300;
+	}
+
+	.cv-spacer-large {
+		height: 1rem;
+		display: block;
+	}
+
+	.cv-spacer {
+		height: 0.75rem;
+		display: block;
+	}
+
+	.cv-spacer-small {
+		height: 0.25rem;
+		display: block;
+	}
+
+	.pub-misc {
+		font-size: 0.7rem;
+		margin-top: 0.3rem;
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.8rem;
+		gap: 0.3rem;
+		align-items: center;
 	}
 
-	.pill-list li {
-		padding: 0.8rem 1rem;
-		border-radius: 999px;
-		background: rgba(255, 255, 255, 0.66);
-		border: 1px solid rgba(16, 35, 29, 0.08);
-		line-height: 1.4;
+	.pub-misc a {
+		color: #777;
+		white-space: nowrap;
+		background-color: #f4f4f4;
+		padding: 0.15rem 0.4rem;
+		border-radius: 1rem;
+		transition: all 0.2s ease;
 	}
 
-	.compact li {
-		padding: 0.7rem 0.9rem;
+	.pub-misc a:hover {
+		color: #414141;
+		text-decoration: none;
+		background-color: #e8e8e8;
 	}
 
-	@keyframes sceneFloat {
-		0%,
-		100% {
-			transform: translateY(0);
+	@media screen and (max-width: 768px) {
+		main#cv {
+			grid-template-columns:
+				[screen-start] 8px
+				[page-start kicker-start text-start gutter-start middle-start] repeat(8, 1fr)
+				[text-end page-end gutter-end kicker-end middle-end] 8px
+				[screen-end];
+			grid-column-gap: 0.5rem;
 		}
 
-		50% {
-			transform: translateY(-8px);
-		}
-	}
-
-	@keyframes neuronPulse {
-		0%,
-		100% {
-			filter: brightness(0.94) scale(1);
+		.cv-left-date {
+			text-align: left;
+			grid-column: text-start / page-end;
+			margin-top: 0.6rem;
 		}
 
-		50% {
-			filter: brightness(1.14) scale(1.08);
-		}
-	}
-
-	@keyframes corePulse {
-		0%,
-		100% {
-			transform: scale(1);
-			filter: saturate(1);
-		}
-
-		50% {
-			transform: scale(1.08);
-			filter: saturate(1.12);
-		}
-	}
-
-	@keyframes ringSpin {
-		from {
-			transform: rotateZ(0deg);
-		}
-
-		to {
-			transform: rotateZ(360deg);
-		}
-	}
-
-	@keyframes dataTravel {
-		from {
-			transform: translateX(0);
-		}
-
-		to {
-			transform: translateX(380%);
-		}
-	}
-
-	@keyframes ruleReveal {
-		0%,
-		100% {
-			transform: scaleX(0.86);
-			opacity: 0.64;
-		}
-
-		50% {
-			transform: scaleX(1);
-			opacity: 1;
-		}
-	}
-
-	@media (max-width: 920px) {
-		.topbar {
-			border-radius: 1.4rem;
-			align-items: flex-start;
-			flex-direction: column;
-			gap: 0.8rem;
-		}
-
-		nav {
-			flex-wrap: wrap;
-			gap: 0.8rem 1rem;
-		}
-
-		.layout {
-			grid-template-columns: 1fr;
-		}
-
-		.hero-layout {
+		.cv-image-links-wrapper {
 			display: block;
 		}
 
-		.hero-visual {
-			min-height: 18rem;
-			margin: -0.4rem 0 1rem;
+		.cv-headshot {
+			width: 104px;
+			flex-basis: 104px;
+			margin-bottom: 1rem;
 		}
 
-		.profile-card {
-			position: static;
-			order: -1;
+		.cv-headshot img {
+			width: 104px;
+			height: 104px;
 		}
-
 	}
 
-	@media (max-width: 640px) {
-		.page-shell {
-			padding: 1rem;
+	@media all and (max-width: 700px) {
+		#cv-title {
+			font-size: 2.2rem;
 		}
 
-		.hero-card,
-		.content-card,
-		.profile-card {
-			border-radius: 1.5rem;
-		}
-
-		.hero-card,
-		.content-card {
-			padding: 1.4rem;
-		}
-
-		h1 {
-			max-width: none;
-			font-size: clamp(2.6rem, 12vw, 4rem);
-		}
-
-		.meaning-space {
-			width: min(100%, 28rem);
-		}
-
-		.profile-card h2,
-		h2 {
-			font-size: 1.9rem;
-		}
-
-		.timeline article,
-		.project-card {
-			grid-template-columns: 1fr;
-			display: grid;
-		}
 	}
 </style>
