@@ -1,0 +1,133 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{tabularx}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlist[itemize]{leftmargin=1.4em, itemsep=0.25em, topsep=0.25em}
+
+\definecolor{heading}{RGB}{16,63,54}
+
+\titleformat{\section}{\large\bfseries\color{heading}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{1.1em}{0.5em}
+
+\newcommand{\cvsection}[1]{
+  \section*{#1}
+  \vspace{-0.6em}
+  \hrule
+  \vspace{0.6em}
+}
+
+\newcommand{\cventry}[4]{
+  \textbf{#1} \hfill #2 \\
+  \emph{#3} \\
+  #4
+  \vspace{0.65em}
+}
+
+\begin{document}
+
+{\LARGE \textbf{Mohammed Batis}}\\[0.35em]
+Wenzhou University, 325000, Wenzhou, China \\
+Email: \href{mailto:batis2019@gmail.com}{batis2019@gmail.com} \quad
+Phone: (+86) 15658563280 \\
+Date of Birth: 09/12/1998 \quad Nationality: Yemeni
+
+\cvsection{Research Interests}
+Reverse engineering artificial neural networks into human understandable algorithms.
+
+My research interests lie in mechanistic interpretability and trustworthy AI. I aim to uncover the internal computational mechanisms of neural networks and large language models.
+
+\begin{itemize}
+  \item Mechanistic interpretability of large language models
+  \item Interpretable machine learning for biomedicine
+\end{itemize}
+
+\cvsection{Education}
+\cventry
+  {MSc Computer Science and Technology}
+  {05/10/2022 -- 30/07/2025}
+  {Wenzhou University}
+  {Final grade: 4.5. Thesis: Research on the Improved RIME Optimization Algorithm and Its Application for Wrapper-based Feature Selection in Biomedical Data.}
+
+\cventry
+  {BSc Computer Science and Technology}
+  {07/10/2018 -- 14/06/2022}
+  {Wenzhou University}
+  {Final grade: 4.03 GPA. Thesis: Design and Implementation of a Chinese HSK Test Preparation Platform.}
+
+\cventry
+  {Secondary School}
+  {14/08/2014 -- 09/07/2017}
+  {Mukalla Model Secondary School}
+  {Final grade: 98.63\%.}
+
+\cvsection{Publications}
+\cventry
+  {ACGRIME: Adaptive Chaotic Gaussian RIME Optimizer for Global Optimization and Feature Selection}
+  {2024}
+  {Cluster Computing Journal}
+  {Published. \href{https://link.springer.com/article/10.1007/s10586-024-04716-9}{Article link}.}
+
+\cventry
+  {Prey Capture Enhanced Harris Hawks Optimizer for Wrapper-based Feature Selection in High-Dimensional Medical Data}
+  {2024}
+  {Computer Methods and Programs in Biomedicine}
+  {Published. \href{https://www.sciencedirect.com/science/article/pii/S0169260726000052}{Article link}.}
+
+\cventry
+  {Random differential RIME optimization for multi-threshold segmentation in dermoscopic skin cancer images}
+  {2024}
+  {Biomedical Signal Processing and Control}
+  {Under second revision.}
+
+\cventry
+  {An enhanced bat optimizer with elite selection and crisscross strategies for multi-threshold image segmentation of lupus nephritis}
+  {2024}
+  {International Journal of Computational Intelligence Systems}
+  {Under review.}
+
+\cvsection{Project}
+\cventry
+  {WHSK -- Interactive HSK Preparation Platform}
+  {09/01/2022 -- Current}
+  {Independent academic and software project}
+  {Developed a gamified web platform for HSK exam preparation, featuring interactive practice and progress tracking. Registered software copyright in China (No. 2025SR0444242). Project link: \href{https://whsk.tech/}{https://whsk.tech/}.}
+
+\cvsection{Honours and Awards}
+\begin{itemize}
+  \item Chinese Government Scholarship at Wenzhou University (10/07/2022)
+  \item Excellent Graduation Design Award at Wenzhou University (20/06/2022)
+  \item Zhejiang Government Scholarship at Wenzhou University (09/10/2021)
+  \item Second Place in Mukalla Model Secondary School Rankings (07/12/2017)
+  \item 9th Best Middle School Graduate in the Province of Wadi Hadramout (04/07/2013)
+\end{itemize}
+
+\cvsection{Technical Skills}
+\begin{itemize}
+  \item Python, PyTorch, MATLAB
+  \item React.js, Node.js
+  \item MongoDB, MySQL
+  \item Git and GitHub
+\end{itemize}
+
+\cvsection{Languages}
+\begin{itemize}
+  \item Arabic (mother tongue)
+  \item English
+  \item Chinese
+\end{itemize}
+
+\cvsection{Interests}
+Research, problem-solving, management, writing, swimming, football
+
+\end{document}
