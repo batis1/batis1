@@ -158,7 +158,8 @@
 					</div>
 
 					<p class="lede">
-						My research interests lie in mechanistic interpretability and trustworthy AI.
+						My research interests lie in mechanistic interpretability, ML visualizations, and
+						trustworthy AI.
 					</p>
 
 					<div class="hero-actions">
