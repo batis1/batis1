@@ -5,7 +5,7 @@
 		location: 'Wenzhou University, Wenzhou, China',
 		email: 'Batis2019@gmail.com',
 		phone: '(+86) 15658563280',
-		cv: './myCV03.pdf',
+		cv: './mainCV.pdf',
 		github: 'https://github.com/batis1',
 		scholar: 'https://scholar.google.com/citations?user=7lz2lbUAAAAJ&hl=en',
 		image: './profile_picture.jpg'
