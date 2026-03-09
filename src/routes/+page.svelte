@@ -134,6 +134,7 @@
 
 <main id="cv">
 	<h1 id="cv-title"><a href="./">Mohammed Batis</a></h1>
+	<h3 id="cv-subtitle">{profile.subtitle}</h3>
 
 	<div class="cv-image-links-wrapper">
 		<div class="cv-headshot">
@@ -320,6 +321,15 @@
 		text-decoration: none;
 	}
 
+	#cv-subtitle {
+		font-family: 'Akzidenz Grotesk', 'Newsreader', sans-serif;
+		font-size: 1.17em;
+		font-weight: 400;
+		line-height: 1.2;
+		color: #0006;
+		margin: 0 0 0.6rem;
+	}
+
 	.cv-intro {
 		margin-top: 0.75rem;
 		margin-bottom: 0.75rem;
@@ -482,6 +492,10 @@
 	@media all and (max-width: 700px) {
 		#cv-title {
 			font-size: 2.2rem;
+		}
+
+		#cv-subtitle {
+			font-size: 0.85rem;
 		}
 
 	}
