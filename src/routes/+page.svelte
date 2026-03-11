@@ -1,121 +1,118 @@
 <script lang="ts">
 	const profile = {
-		name: 'Mohammed Batis',
-		subtitle: 'ML researcher',
-		location: 'Wenzhou University, Wenzhou, China',
-		email: 'batis2019@gmail.com',
-		phone: '(+86) 15658563280',
-		cv: './mainCV.pdf',
-		github: 'https://github.com/batis1',
-		scholar: 'https://scholar.google.com/citations?user=7lz2lbUAAAAJ&hl=en',
-		image: './profile_picture.jpg'
+		name: "Mohammed Batis",
+		// subtitle: "ML researcher",
+		location: "Wenzhou University, Wenzhou, China",
+		email: "batis2019@gmail.com",
+		phone: "(+86) 15658563280",
+		cv: "./mainCV.pdf",
+		github: "https://github.com/batis1",
+		scholar: "https://scholar.google.com/citations?user=7lz2lbUAAAAJ&hl=en",
+		image: "./profile_picture.jpg",
 	};
 
 	const education = [
 		{
-			date: '2022 - 2025',
-			degree: 'MSc Computer Science and Technology',
-			school: 'Wenzhou University',
-			location: 'Wenzhou, China',
-			detail:
-				'Final grade: 4.5. Thesis: Research on the Improved RIME Optimization Algorithm and Its Application for Wrapper-based Feature Selection in Biomedical Data.'
+			date: "2022 - 2025",
+			degree: "MSc Computer Science and Technology",
+			school: "Wenzhou University",
+			location: "Wenzhou, China",
+			detail: "Final grade: 4.5. Thesis: Research on the Improved RIME Optimization Algorithm and Its Application for Wrapper-based Feature Selection in Biomedical Data.",
 		},
 		{
-			date: '2018 - 2022',
-			degree: 'BSc Computer Science and Technology',
-			school: 'Wenzhou University',
-			location: 'Wenzhou, China',
-			detail:
-				'Final grade: 4.03 GPA. Thesis: Design and Implementation of a Chinese HSK Test Preparation Platform.'
+			date: "2018 - 2022",
+			degree: "BSc Computer Science and Technology",
+			school: "Wenzhou University",
+			location: "Wenzhou, China",
+			detail: "Final grade: 4.03 GPA. Thesis: Design and Implementation of a Chinese HSK Test Preparation Platform.",
 		},
 		{
-			date: '2014 - 2017',
-			degree: 'Secondary School',
-			school: 'Mukalla Model Secondary School',
-			location: 'Mukalla, Yemen',
-			detail: 'Final grade: 98.63%.'
-		}
+			date: "2014 - 2017",
+			degree: "Secondary School",
+			school: "Mukalla Model Secondary School",
+			location: "Mukalla, Yemen",
+			detail: "Final grade: 98.63%.",
+		},
 	];
 
 	const publications = [
 		{
-			year: '2024',
-			title: 'ACGRIME: Adaptive Chaotic Gaussian RIME Optimizer for Global Optimization and Feature Selection',
-			venue: 'Cluster Computing Journal',
-			status: 'Published',
-			link: 'https://link.springer.com/article/10.1007/s10586-024-04716-9'
+			year: "2024",
+			title: "ACGRIME: Adaptive Chaotic Gaussian RIME Optimizer for Global Optimization and Feature Selection",
+			venue: "Cluster Computing Journal",
+			status: "Published",
+			link: "https://link.springer.com/article/10.1007/s10586-024-04716-9",
 		},
 		{
-			year: '2024',
-			title: 'Prey Capture Enhanced Harris Hawks Optimizer for Wrapper-based Feature Selection in High-Dimensional Medical Data',
-			venue: 'Computer Methods and Programs in Biomedicine',
-			status: 'Published',
-			link: 'https://www.sciencedirect.com/science/article/pii/S0169260726000052'
+			year: "2024",
+			title: "Prey Capture Enhanced Harris Hawks Optimizer for Wrapper-based Feature Selection in High-Dimensional Medical Data",
+			venue: "Computer Methods and Programs in Biomedicine",
+			status: "Published",
+			link: "https://www.sciencedirect.com/science/article/pii/S0169260726000052",
 		},
 		{
-			year: '2024',
-			title: 'Random differential RIME optimization for multi-threshold segmentation in dermoscopic skin cancer images',
-			venue: 'Biomedical Signal Processing and Control',
-			status: 'Under second revision'
+			year: "2024",
+			title: "Random differential RIME optimization for multi-threshold segmentation in dermoscopic skin cancer images",
+			venue: "Biomedical Signal Processing and Control",
+			status: "Under second revision",
 		},
 		{
-			year: '2024',
-			title: 'An enhanced bat optimizer with elite selection and crisscross strategies for multi-threshold image segmentation of lupus nephritis',
-			venue: 'International Journal of Computational Intelligence Systems',
-			status: 'Under review'
-		}
+			year: "2024",
+			title: "An enhanced bat optimizer with elite selection and crisscross strategies for multi-threshold image segmentation of lupus nephritis",
+			venue: "International Journal of Computational Intelligence Systems",
+			status: "Under review",
+		},
 	];
 
 	const projects = [
 		{
-			date: '2022 - Present',
-			title: 'WHSK: Interactive HSK Preparation Platform',
-			detail:
-				'A gamified web platform for Chinese HSK preparation with interactive practice, progress tracking, and software copyright registration in China (2025SR0444242).',
-			link: 'https://whsk.tech/'
-		}
+			date: "2022 - Present",
+			title: "WHSK: Interactive HSK Preparation Platform",
+			detail: "A gamified web platform for Chinese HSK preparation with interactive practice, progress tracking, and software copyright registration in China (2025SR0444242).",
+			link: "https://whsk.tech/",
+		},
 	];
 
 	const awards = [
 		{
-			date: '2022',
-			title: 'Chinese Government Scholarship at Wenzhou University'
+			date: "2022",
+			title: "Chinese Government Scholarship at Wenzhou University",
 		},
 		{
-			date: '2022',
-			title: 'Excellent Graduation Design Award at Wenzhou University'
+			date: "2022",
+			title: "Excellent Graduation Design Award at Wenzhou University",
 		},
 		{
-			date: '2021',
-			title: 'Zhejiang Government Scholarship at Wenzhou University'
+			date: "2021",
+			title: "Zhejiang Government Scholarship at Wenzhou University",
 		},
 		{
-			date: '2017',
-			title: 'Second Place in Mukalla Model Secondary School Rankings'
+			date: "2017",
+			title: "Second Place in Mukalla Model Secondary School Rankings",
 		},
 		{
-			date: '2013',
-			title: '9th Best Middle School Graduate in the Province of Wadi Hadramout'
-		}
+			date: "2013",
+			title: "9th Best Middle School Graduate in the Province of Wadi Hadramout",
+		},
 	];
 
 	const skillGroups = [
 		{
-			category: 'Programming and ML',
-			skills: 'Python, PyTorch, MATLAB'
+			category: "Programming and ML",
+			skills: "Python, PyTorch, MATLAB",
 		},
 		{
-			category: 'Web and Software',
-			skills: 'React, Svelte, D3.js, Node.js, MongoDB, MySQL'
+			category: "Web and Software",
+			skills: "React, Svelte, D3.js, Node.js, MongoDB, MySQL",
 		},
 		{
-			category: 'Tools',
-			skills: 'Git and GitHub'
+			category: "Tools",
+			skills: "Git and GitHub",
 		},
 		{
-			category: 'Languages',
-			skills: 'Arabic, English, Chinese'
-		}
+			category: "Languages",
+			skills: "Arabic, English, Chinese",
+		},
 	];
 </script>
 
@@ -143,28 +140,44 @@
 
 		<div class="cv-image-links">
 			<div class="cv-social-link">
-				<div class="cv-social-link-icon-wrapper"><i class="fas fa-home icon"></i></div>
-				<div class="cv-social-link-text-wrapper">{profile.location}</div>
+				<div class="cv-social-link-icon-wrapper">
+					<i class="fas fa-home icon"></i>
+				</div>
+				<div class="cv-social-link-text-wrapper">
+					{profile.location}
+				</div>
 			</div>
 			<div class="cv-social-link">
-				<div class="cv-social-link-icon-wrapper"><i class="fas fa-envelope icon"></i></div>
+				<div class="cv-social-link-icon-wrapper">
+					<i class="fas fa-envelope icon"></i>
+				</div>
 				<div class="cv-social-link-text-wrapper">
 					<a href={`mailto:${profile.email}`}>{profile.email}</a>
 				</div>
 			</div>
 			<div class="cv-social-link">
-				<div class="cv-social-link-icon-wrapper"><i class="far fa-file-pdf icon"></i></div>
-				<div class="cv-social-link-text-wrapper"><a href={profile.cv}>CV PDF</a></div>
+				<div class="cv-social-link-icon-wrapper">
+					<i class="far fa-file-pdf icon"></i>
+				</div>
+				<div class="cv-social-link-text-wrapper">
+					<a href={profile.cv}>CV PDF</a>
+				</div>
 			</div>
 		</div>
 
 		<div class="cv-image-links">
 			<div class="cv-social-link">
-				<div class="cv-social-link-icon-wrapper"><i class="fab fa-github icon"></i></div>
-				<div class="cv-social-link-text-wrapper"><a href={profile.github}>@batis1</a></div>
+				<div class="cv-social-link-icon-wrapper">
+					<i class="fab fa-github icon"></i>
+				</div>
+				<div class="cv-social-link-text-wrapper">
+					<a href={profile.github}>@batis1</a>
+				</div>
 			</div>
 			<div class="cv-social-link">
-				<div class="cv-social-link-icon-wrapper"><i class="fas fa-phone icon"></i></div>
+				<div class="cv-social-link-icon-wrapper">
+					<i class="fas fa-phone icon"></i>
+				</div>
 				<div class="cv-social-link-text-wrapper">{profile.phone}</div>
 			</div>
 			<div class="cv-social-link">
@@ -179,9 +192,14 @@
 	</div>
 
 	<div class="cv-intro">
-		My research focuses on making <strong class="cv-ai">machine learning</strong> models more
-		<strong class="cv-ai-2">interpretable</strong> and <strong class="cv-ai-2">trustworthy</strong>
-		through <strong class="cv-vis">ML visualizations</strong> and mechanistic understanding.
+		My research focuses on making <strong class="cv-ai"
+			>machine learning</strong
+		>
+		models that are more
+		<strong class="cv-ai-2">interpretable</strong> and
+		<strong class="cv-ai-2">trustworthy</strong>
+		through <strong class="cv-vis">ML visualizations</strong> and mechanistic
+		understanding.
 	</div>
 
 	<hr />
@@ -205,7 +223,9 @@
 				<b>{publication.title}</b>
 			{/if}
 		</div>
-		<div class="cv-description"><i>{publication.venue}. {publication.status}.</i></div>
+		<div class="cv-description">
+			<i>{publication.venue}. {publication.status}.</i>
+		</div>
 		<div class="cv-spacer-large"></div>
 	{/each}
 
@@ -230,7 +250,8 @@
 	<h2 id="technology-skills">Technology Skills</h2>
 	{#each skillGroups as group}
 		<p style="margin: 5px 0">
-			<strong>{group.category}:</strong> {group.skills}
+			<strong>{group.category}:</strong>
+			{group.skills}
 		</p>
 	{/each}
 </main>
@@ -244,8 +265,8 @@
 		margin: 0;
 		background: #fff;
 		color: #414141;
-		font-family:
-			-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+			Helvetica, Arial, sans-serif;
 	}
 
 	:global(*) {
@@ -258,8 +279,8 @@
 	}
 
 	main#cv {
-		font-family:
-			-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+			Helvetica, Arial, sans-serif;
 		display: grid;
 		justify-items: stretch;
 		grid-template-columns:
@@ -311,7 +332,7 @@
 		letter-spacing: -0.08rem;
 		color: #1a1a1a;
 		margin-bottom: 0;
-		font-family: 'Akzidenz Grotesk', 'Newsreader', sans-serif;
+		font-family: "Akzidenz Grotesk", "Newsreader", sans-serif;
 	}
 
 	#cv-title a,
@@ -322,7 +343,7 @@
 	}
 
 	#cv-subtitle {
-		font-family: 'Akzidenz Grotesk', 'Newsreader', sans-serif;
+		font-family: "Akzidenz Grotesk", "Newsreader", sans-serif;
 		font-size: 1.17em;
 		font-weight: 400;
 		line-height: 1.2;
@@ -461,7 +482,10 @@
 		main#cv {
 			grid-template-columns:
 				[screen-start] 8px
-				[page-start kicker-start text-start gutter-start middle-start] repeat(8, 1fr)
+				[page-start kicker-start text-start gutter-start middle-start] repeat(
+					8,
+					1fr
+				)
 				[text-end page-end gutter-end kicker-end middle-end] 8px
 				[screen-end];
 			grid-column-gap: 0.5rem;
@@ -497,6 +521,5 @@
 		#cv-subtitle {
 			font-size: 0.85rem;
 		}
-
 	}
 </style>
