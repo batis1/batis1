@@ -5,7 +5,7 @@
 		location: "USTC, Hefei, China",
 		email: "batis2019@gmail.com",
 		phone: "(+86) 15658563280",
-		cv: "./mainCV.pdf",
+		cv: "./mainCV.pdf?v=20260313",
 		github: "https://github.com/batis1",
 		scholar: "https://scholar.google.com/citations?user=7lz2lbUAAAAJ&hl=en",
 		image: "./profile_picture.jpg",
