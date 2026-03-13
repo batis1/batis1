@@ -1,8 +1,8 @@
 <script lang="ts">
 	const profile = {
 		name: "Mohammed Batis",
-		// subtitle: "ML researcher",
-		location: "Wenzhou University, Wenzhou, China",
+		subtitle: "CS PhD Student @ USTC",
+		location: "USTC, Hefei, China",
 		email: "batis2019@gmail.com",
 		phone: "(+86) 15658563280",
 		cv: "./mainCV.pdf",
@@ -12,6 +12,13 @@
 	};
 
 	const education = [
+		{
+			date: "2025 - Present",
+			degree: "PhD Computer Science and Technology",
+			school: "University of Science and Technology of China",
+			location: "Hefei, China",
+			detail: "",
+		},
 		{
 			date: "2022 - 2025",
 			degree: "MSc Computer Science and Technology",

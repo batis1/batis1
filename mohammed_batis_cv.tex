@@ -1,9 +1,15 @@
 \documentclass[11pt,a4paper]{article}
 
 \usepackage[margin=1in]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\else
+  \usepackage{fontspec}
+  \setmainfont{TeX Gyre Termes}
+\fi
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
 \usepackage{array}
@@ -37,9 +43,10 @@
 \begin{document}
 
 {\LARGE \textbf{Mohammed Batis}}\\[0.35em]
-Wenzhou University, 325000, Wenzhou, China \\
+USTC, Hefei, China \\
 Email: \href{mailto:batis2019@gmail.com}{batis2019@gmail.com} \quad
 Phone: (+86) 15658563280 \\
+Page: \href{https://batis1.github.io/batis1/}{https://batis1.github.io/batis1/} \\
 Date of Birth: 09/12/1998 \quad Nationality: Yemeni
 
 \cvsection{Research Interests}
@@ -53,6 +60,12 @@ My research interests lie in mechanistic interpretability and trustworthy AI. I 
 \end{itemize}
 
 \cvsection{Education}
+\cventry
+  {PhD Computer Science and Technology}
+  {2025 -- Present}
+  {University of Science and Technology of China, Hefei, China}
+  {}
+
 \cventry
   {MSc Computer Science and Technology}
   {05/10/2022 -- 30/07/2025}
@@ -126,8 +139,5 @@ My research interests lie in mechanistic interpretability and trustworthy AI. I 
   \item English
   \item Chinese
 \end{itemize}
-
-\cvsection{Interests}
-Research, problem-solving, management, writing, swimming, football
 
 \end{document}
