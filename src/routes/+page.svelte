@@ -130,10 +130,6 @@
 		content="Academic CV website for Mohammed Batis, focused on mechanistic interpretability, ML visualizations, and trustworthy AI."
 	/>
 	<link rel="stylesheet" href="https://use.typekit.net/qyo6xht.css" />
-	<link
-		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-		rel="stylesheet"
-	/>
 </svelte:head>
 
 <main id="cv">
@@ -147,25 +143,19 @@
 
 		<div class="cv-image-links">
 			<div class="cv-social-link">
-				<div class="cv-social-link-icon-wrapper">
-					<i class="fas fa-home icon"></i>
-				</div>
+				<div class="cv-social-link-label">Location</div>
 				<div class="cv-social-link-text-wrapper">
 					{profile.location}
 				</div>
 			</div>
 			<div class="cv-social-link">
-				<div class="cv-social-link-icon-wrapper">
-					<i class="fas fa-envelope icon"></i>
-				</div>
+				<div class="cv-social-link-label">Email</div>
 				<div class="cv-social-link-text-wrapper">
 					<a href={`mailto:${profile.email}`}>{profile.email}</a>
 				</div>
 			</div>
 			<div class="cv-social-link">
-				<div class="cv-social-link-icon-wrapper">
-					<i class="far fa-file-pdf icon"></i>
-				</div>
+				<div class="cv-social-link-label">CV</div>
 				<div class="cv-social-link-text-wrapper">
 					<a href={profile.cv}>CV PDF</a>
 				</div>
@@ -174,23 +164,17 @@
 
 		<div class="cv-image-links">
 			<div class="cv-social-link">
-				<div class="cv-social-link-icon-wrapper">
-					<i class="fab fa-github icon"></i>
-				</div>
+				<div class="cv-social-link-label">GitHub</div>
 				<div class="cv-social-link-text-wrapper">
 					<a href={profile.github}>@batis1</a>
 				</div>
 			</div>
 			<div class="cv-social-link">
-				<div class="cv-social-link-icon-wrapper">
-					<i class="fas fa-phone icon"></i>
-				</div>
+				<div class="cv-social-link-label">Phone</div>
 				<div class="cv-social-link-text-wrapper">{profile.phone}</div>
 			</div>
 			<div class="cv-social-link">
-				<div class="cv-social-link-icon-wrapper">
-					<i class="fa fa-graduation-cap icon"></i>
-				</div>
+				<div class="cv-social-link-label">Scholar</div>
 				<div class="cv-social-link-text-wrapper">
 					<a href={profile.scholar}>Google Scholar</a>
 				</div>
@@ -256,7 +240,7 @@
 
 	<h2 id="technology-skills">Technology Skills</h2>
 	{#each skillGroups as group}
-		<p style="margin: 5px 0">
+		<p class="cv-skill-row">
 			<strong>{group.category}:</strong>
 			{group.skills}
 		</p>
@@ -270,10 +254,9 @@
 
 	:global(body) {
 		margin: 0;
-		background: #fff;
-		color: #414141;
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-			Helvetica, Arial, sans-serif;
+		background: #fbfbfa;
+		color: #2f3437;
+		font-family: "SF Pro Display", "Helvetica Neue", "Switzer", sans-serif;
 	}
 
 	:global(*) {
@@ -286,8 +269,7 @@
 	}
 
 	main#cv {
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-			Helvetica, Arial, sans-serif;
+		font-family: "SF Pro Display", "Helvetica Neue", "Switzer", sans-serif;
 		display: grid;
 		justify-items: stretch;
 		grid-template-columns:
@@ -300,10 +282,10 @@
 			[page-end gutter-end] 1fr
 			[screen-end];
 		grid-column-gap: 1.5rem;
-		padding-top: 1rem;
-		padding-bottom: 3rem;
-		line-height: 1.5;
-		color: #414141;
+		padding-top: 3rem;
+		padding-bottom: 5rem;
+		line-height: 1.6;
+		color: #2f3437;
 		-webkit-font-smoothing: antialiased;
 	}
 
@@ -312,98 +294,108 @@
 	}
 
 	main#cv h1 {
-		font-size: 2.25rem;
-		margin-top: 1rem;
-		line-height: 1.25;
+		font-size: 2.7rem;
+		margin-top: 1.5rem;
+		line-height: 1.08;
 	}
 
 	main#cv h2 {
-		font-size: 2rem;
-		margin-top: 1rem;
-		margin-bottom: 0.5rem;
-		font-weight: 400;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-		padding-bottom: 0.35rem;
+		font-size: 0.78rem;
+		margin-top: 2.75rem;
+		margin-bottom: 1rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: #787774;
+		border-bottom: 1px solid #eaeaea;
+		padding-bottom: 0.65rem;
 	}
 
 	main#cv hr {
-		margin: 1.5rem 0;
+		margin: 2rem 0 0;
 		border: 0;
-		border-top: 1px solid #ddd;
+		border-top: 1px solid #eaeaea;
 	}
 
 	#cv-title {
-		font-weight: 600;
+		font-weight: 700;
 		line-height: 1;
-		font-size: 2.5rem;
-		letter-spacing: -0.08rem;
-		color: #1a1a1a;
+		font-size: 3rem;
+		letter-spacing: 0;
+		color: #111;
 		margin-bottom: 0;
-		font-family: "Akzidenz Grotesk", "Newsreader", sans-serif;
+		font-family: "Newsreader", "Instrument Serif", Georgia, serif;
 	}
 
 	#cv-title a,
 	#cv-title a:hover {
-		color: #1a1a1a;
-		font-weight: 600;
+		color: #111;
+		font-weight: 700;
 		text-decoration: none;
 	}
 
 	#cv-subtitle {
-		font-family: "Akzidenz Grotesk", "Newsreader", sans-serif;
-		font-size: 1.17em;
-		font-weight: 400;
+		font-family: "SF Pro Display", "Helvetica Neue", "Switzer", sans-serif;
+		font-size: 0.95rem;
+		font-weight: 500;
 		line-height: 1.2;
-		color: #0006;
-		margin: 0 0 0.6rem;
+		color: #787774;
+		margin: 0.35rem 0 1.2rem;
 	}
 
 	.cv-intro {
-		margin-top: 0.75rem;
+		margin-top: 1.4rem;
 		margin-bottom: 0.75rem;
-		line-height: 1.5;
+		line-height: 1.65;
+		font-size: 1.04rem;
+		max-width: 46rem;
 	}
 
 	.cv-ai,
 	.cv-ai-2,
 	.cv-vis {
-		border-radius: 1rem;
-		padding: 0 0.5rem;
+		border-radius: 9999px;
+		padding: 0.05rem 0.45rem;
+		font-weight: 600;
 	}
 
 	.cv-ai {
-		background-color: #bbf6e2;
-		color: #36876c;
+		background-color: #edf3ec;
+		color: #346538;
 	}
 
 	.cv-ai-2 {
-		background-color: #56b2e5;
-		color: white;
+		background-color: #e1f3fe;
+		color: #1f6c9f;
 	}
 
 	.cv-vis {
-		background-color: #ffd7f1;
-		color: #995081;
+		background-color: #fbf3db;
+		color: #956400;
 	}
 
 	.cv-image-links-wrapper {
 		display: flex;
-		font-size: 0.85rem;
-		gap: 1.5rem;
+		font-size: 0.86rem;
+		gap: 2rem;
 		align-items: flex-start;
+		padding: 1.25rem 0;
+		border-top: 1px solid #eaeaea;
+		border-bottom: 1px solid #eaeaea;
 	}
 
 	.cv-headshot {
-		width: 120px;
-		flex: 0 0 120px;
+		width: 112px;
+		flex: 0 0 112px;
 	}
 
 	.cv-headshot img {
-		width: 120px;
-		height: 120px;
+		width: 112px;
+		height: 112px;
 		object-fit: cover;
 		object-position: center top;
-		border-radius: 100%;
+		border: 1px solid #eaeaea;
+		border-radius: 8px;
 		display: block;
 	}
 
@@ -412,38 +404,39 @@
 	}
 
 	.cv-social-link {
-		display: flex;
-		margin-bottom: 0.2rem;
+		display: grid;
+		grid-template-columns: 4.5rem minmax(0, 1fr);
+		gap: 0.7rem;
+		margin-bottom: 0.35rem;
 	}
 
-	.cv-social-link-icon-wrapper {
-		flex: 0 0 25px;
-		text-align: center;
-		margin-right: 0.5rem;
-	}
-
-	.cv-social-link-icon-wrapper i {
-		color: #515151;
+	.cv-social-link-label {
+		color: #787774;
+		font-size: 0.68rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
 	}
 
 	.cv-social-link-text-wrapper > a {
-		color: #414141;
+		color: #2f3437;
 	}
 
 	.cv-left-date {
 		grid-column: kicker;
 		text-align: right;
-		font-size: 0.7rem;
+		font-size: 0.72rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		color: #666;
+		color: #787774;
+		font-family: "SF Mono", "Geist Mono", "JetBrains Mono", monospace;
 	}
 
 	.cv-description {
-		color: #666;
+		color: #787774;
 		font-size: 0.9rem;
-		font-weight: 300;
+		font-weight: 400;
 	}
 
 	.cv-spacer-large {
@@ -471,18 +464,25 @@
 	}
 
 	.pub-misc a {
-		color: #777;
+		color: #787774;
 		white-space: nowrap;
-		background-color: #f4f4f4;
-		padding: 0.15rem 0.4rem;
-		border-radius: 1rem;
-		transition: all 0.2s ease;
+		background-color: #f7f6f3;
+		border: 1px solid #eaeaea;
+		padding: 0.15rem 0.45rem;
+		border-radius: 9999px;
+		transition:
+			background-color 0.2s ease,
+			color 0.2s ease;
 	}
 
 	.pub-misc a:hover {
-		color: #414141;
+		color: #2f3437;
 		text-decoration: none;
-		background-color: #e8e8e8;
+		background-color: #fff;
+	}
+
+	.cv-skill-row {
+		margin: 0.35rem 0;
 	}
 
 	@media screen and (max-width: 768px) {
@@ -505,7 +505,8 @@
 		}
 
 		.cv-image-links-wrapper {
-			display: block;
+			display: grid;
+			gap: 1rem;
 		}
 
 		.cv-headshot {
@@ -517,6 +518,10 @@
 		.cv-headshot img {
 			width: 104px;
 			height: 104px;
+		}
+
+		.cv-social-link {
+			grid-template-columns: 4.25rem minmax(0, 1fr);
 		}
 	}
 
