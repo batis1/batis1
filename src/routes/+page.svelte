@@ -133,54 +133,55 @@
 </svelte:head>
 
 <main id="cv">
-	<h1 id="cv-title"><a href="./">Mohammed Batis</a></h1>
-	<h3 id="cv-subtitle">{profile.subtitle}</h3>
-
-	<div class="cv-image-links-wrapper">
-		<div class="cv-headshot">
-			<img src={profile.image} alt={profile.name} />
+	<section class="cv-header-card" aria-labelledby="cv-title">
+		<div class="cv-identity">
+			<h1 id="cv-title"><a href="./">Mohammed Batis</a></h1>
+			<h3 id="cv-subtitle">{profile.subtitle}</h3>
 		</div>
 
-		<div class="cv-image-links">
-			<div class="cv-social-link">
-				<div class="cv-social-link-label">Location</div>
-				<div class="cv-social-link-text-wrapper">
-					{profile.location}
-				</div>
+		<div class="cv-image-links-wrapper">
+			<div class="cv-headshot">
+				<img src={profile.image} alt={profile.name} />
 			</div>
-			<div class="cv-social-link">
-				<div class="cv-social-link-label">Email</div>
-				<div class="cv-social-link-text-wrapper">
-					<a href={`mailto:${profile.email}`}>{profile.email}</a>
-				</div>
-			</div>
-			<div class="cv-social-link">
-				<div class="cv-social-link-label">CV</div>
-				<div class="cv-social-link-text-wrapper">
-					<a href={profile.cv}>CV PDF</a>
-				</div>
-			</div>
-		</div>
 
-		<div class="cv-image-links">
-			<div class="cv-social-link">
-				<div class="cv-social-link-label">GitHub</div>
-				<div class="cv-social-link-text-wrapper">
-					<a href={profile.github}>@batis1</a>
+			<div class="cv-contact-grid">
+				<div class="cv-social-link">
+					<div class="cv-social-link-label">Location</div>
+					<div class="cv-social-link-text-wrapper">
+						{profile.location}
+					</div>
 				</div>
-			</div>
-			<div class="cv-social-link">
-				<div class="cv-social-link-label">Phone</div>
-				<div class="cv-social-link-text-wrapper">{profile.phone}</div>
-			</div>
-			<div class="cv-social-link">
-				<div class="cv-social-link-label">Scholar</div>
-				<div class="cv-social-link-text-wrapper">
-					<a href={profile.scholar}>Google Scholar</a>
+				<div class="cv-social-link">
+					<div class="cv-social-link-label">Email</div>
+					<div class="cv-social-link-text-wrapper">
+						<a href={`mailto:${profile.email}`}>{profile.email}</a>
+					</div>
+				</div>
+				<div class="cv-social-link">
+					<div class="cv-social-link-label">CV</div>
+					<div class="cv-social-link-text-wrapper">
+						<a href={profile.cv}>CV PDF</a>
+					</div>
+				</div>
+				<div class="cv-social-link">
+					<div class="cv-social-link-label">GitHub</div>
+					<div class="cv-social-link-text-wrapper">
+						<a href={profile.github}>@batis1</a>
+					</div>
+				</div>
+				<div class="cv-social-link">
+					<div class="cv-social-link-label">Phone</div>
+					<div class="cv-social-link-text-wrapper">{profile.phone}</div>
+				</div>
+				<div class="cv-social-link">
+					<div class="cv-social-link-label">Scholar</div>
+					<div class="cv-social-link-text-wrapper">
+						<a href={profile.scholar}>Google Scholar</a>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 
 	<div class="cv-intro">
 		My research focuses on making <strong class="cv-ai"
@@ -198,8 +199,8 @@
 	<h2 id="education">Education</h2>
 	{#each education as item}
 		<div class="cv-left-date">{item.date}</div>
-		<b>{item.degree}</b>
-		<div>{item.school}, {item.location}</div>
+		<b class="cv-entry-title">{item.degree}</b>
+		<div class="cv-entry-meta">{item.school}, {item.location}</div>
 		<div class="cv-description">{item.detail}</div>
 		<div class="cv-spacer"></div>
 	{/each}
@@ -209,9 +210,9 @@
 		<div class="cv-left-date">{publication.year}</div>
 		<div>
 			{#if publication.link}
-				<a href={publication.link}><b>{publication.title}</b></a>
+				<a class="cv-entry-title" href={publication.link}>{publication.title}</a>
 			{:else}
-				<b>{publication.title}</b>
+				<b class="cv-entry-title">{publication.title}</b>
 			{/if}
 		</div>
 		<div class="cv-description">
@@ -223,7 +224,7 @@
 	<h2 id="projects">Projects</h2>
 	{#each projects as project}
 		<div class="cv-left-date">{project.date}</div>
-		<div><a href={project.link}><b>{project.title}</b></a></div>
+		<div><a class="cv-entry-title" href={project.link}>{project.title}</a></div>
 		<div class="cv-description">{project.detail}</div>
 		<div class="pub-misc">
 			<a href={project.link}>Project link</a>
@@ -254,8 +255,8 @@
 
 	:global(body) {
 		margin: 0;
-		background: #fbfbfa;
-		color: #2f3437;
+		background: #f4f4f2;
+		color: #1a1a1a;
 		font-family: "SF Pro Display", "Helvetica Neue", "Switzer", sans-serif;
 	}
 
@@ -282,10 +283,10 @@
 			[page-end gutter-end] 1fr
 			[screen-end];
 		grid-column-gap: 1.5rem;
-		padding-top: 3rem;
+		padding-top: 4rem;
 		padding-bottom: 5rem;
 		line-height: 1.6;
-		color: #2f3437;
+		color: #1a1a1a;
 		-webkit-font-smoothing: antialiased;
 	}
 
@@ -294,27 +295,27 @@
 	}
 
 	main#cv h1 {
-		font-size: 2.7rem;
-		margin-top: 1.5rem;
-		line-height: 1.08;
+		font-size: 2.85rem;
+		margin: 0;
+		line-height: 1.05;
 	}
 
 	main#cv h2 {
 		font-size: 0.78rem;
-		margin-top: 2.75rem;
-		margin-bottom: 1rem;
+		margin-top: 3.25rem;
+		margin-bottom: 1.25rem;
 		font-weight: 700;
 		text-transform: uppercase;
-		letter-spacing: 0.08em;
-		color: #787774;
-		border-bottom: 1px solid #eaeaea;
-		padding-bottom: 0.65rem;
+		letter-spacing: 0.12em;
+		color: #737373;
+		border-bottom: 1px solid #deded9;
+		padding-bottom: 0.75rem;
 	}
 
 	main#cv hr {
-		margin: 2rem 0 0;
+		margin: 2.25rem 0 0;
 		border: 0;
-		border-top: 1px solid #eaeaea;
+		border-top: 1px solid #deded9;
 	}
 
 	#cv-title {
@@ -322,14 +323,14 @@
 		line-height: 1;
 		font-size: 3rem;
 		letter-spacing: 0;
-		color: #111;
+		color: #0e0e0e;
 		margin-bottom: 0;
-		font-family: "Newsreader", "Instrument Serif", Georgia, serif;
+		font-family: "SF Pro Display", "Helvetica Neue", "Switzer", sans-serif;
 	}
 
 	#cv-title a,
 	#cv-title a:hover {
-		color: #111;
+		color: #0e0e0e;
 		font-weight: 700;
 		text-decoration: none;
 	}
@@ -339,12 +340,26 @@
 		font-size: 0.95rem;
 		font-weight: 500;
 		line-height: 1.2;
-		color: #787774;
+		color: #737373;
 		margin: 0.35rem 0 1.2rem;
 	}
 
+	.cv-header-card {
+		display: grid;
+		gap: 1.75rem;
+		background: #fff;
+		border-radius: 24px;
+		box-shadow: 0 18px 50px rgba(25, 25, 20, 0.08);
+		padding: 2rem;
+	}
+
+	.cv-identity {
+		border-bottom: 1px solid #e6e6e3;
+		padding-bottom: 1.35rem;
+	}
+
 	.cv-intro {
-		margin-top: 1.4rem;
+		margin-top: 2rem;
 		margin-bottom: 0.75rem;
 		line-height: 1.65;
 		font-size: 1.04rem;
@@ -357,95 +372,102 @@
 		border-radius: 9999px;
 		padding: 0.05rem 0.45rem;
 		font-weight: 600;
-	}
-
-	.cv-ai {
 		background-color: #edf3ec;
 		color: #346538;
-	}
-
-	.cv-ai-2 {
-		background-color: #e1f3fe;
-		color: #1f6c9f;
-	}
-
-	.cv-vis {
-		background-color: #fbf3db;
-		color: #956400;
 	}
 
 	.cv-image-links-wrapper {
 		display: flex;
 		font-size: 0.86rem;
-		gap: 2rem;
+		gap: 1.6rem;
 		align-items: flex-start;
-		padding: 1.25rem 0;
-		border-top: 1px solid #eaeaea;
-		border-bottom: 1px solid #eaeaea;
 	}
 
 	.cv-headshot {
-		width: 112px;
-		flex: 0 0 112px;
+		width: 96px;
+		flex: 0 0 96px;
 	}
 
 	.cv-headshot img {
-		width: 112px;
-		height: 112px;
+		width: 96px;
+		height: 96px;
 		object-fit: cover;
 		object-position: center top;
-		border: 1px solid #eaeaea;
-		border-radius: 8px;
+		border-radius: 18px;
 		display: block;
+		box-shadow: 0 8px 24px rgba(25, 25, 20, 0.08);
 	}
 
-	.cv-image-links {
+	.cv-contact-grid {
+		display: grid;
 		flex: 1;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		column-gap: 2rem;
+		row-gap: 0.45rem;
 	}
 
 	.cv-social-link {
 		display: grid;
 		grid-template-columns: 4.5rem minmax(0, 1fr);
 		gap: 0.7rem;
-		margin-bottom: 0.35rem;
+		min-width: 0;
 	}
 
 	.cv-social-link-label {
-		color: #787774;
+		color: #8a8a86;
 		font-size: 0.68rem;
 		font-weight: 700;
-		letter-spacing: 0.08em;
+		letter-spacing: 0.12em;
 		text-transform: uppercase;
 	}
 
+	.cv-social-link-text-wrapper {
+		min-width: 0;
+		overflow-wrap: anywhere;
+	}
+
 	.cv-social-link-text-wrapper > a {
-		color: #2f3437;
+		color: #1a1a1a;
 	}
 
 	.cv-left-date {
 		grid-column: kicker;
 		text-align: right;
-		font-size: 0.72rem;
+		font-size: 0.68rem;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		color: #787774;
+		justify-content: flex-start;
+		padding-top: 0.18rem;
+		color: #8a8a86;
 		font-family: "SF Mono", "Geist Mono", "JetBrains Mono", monospace;
 	}
 
+	.cv-entry-title {
+		color: #111;
+		font-size: 1rem;
+		font-weight: 600;
+		line-height: 1.45;
+	}
+
+	.cv-entry-meta {
+		line-height: 1.45;
+	}
+
 	.cv-description {
-		color: #787774;
+		color: #737373;
 		font-size: 0.9rem;
 		font-weight: 400;
+		line-height: 1.55;
+		margin-top: 0.18rem;
 	}
 
 	.cv-spacer-large {
-		height: 1rem;
+		height: 1.15rem;
 		display: block;
 	}
 
 	.cv-spacer {
-		height: 0.75rem;
+		height: 0.95rem;
 		display: block;
 	}
 
@@ -464,10 +486,10 @@
 	}
 
 	.pub-misc a {
-		color: #787774;
+		color: #737373;
 		white-space: nowrap;
-		background-color: #f7f6f3;
-		border: 1px solid #eaeaea;
+		background-color: #fff;
+		border: 1px solid #deded9;
 		padding: 0.15rem 0.45rem;
 		border-radius: 9999px;
 		transition:
@@ -476,9 +498,9 @@
 	}
 
 	.pub-misc a:hover {
-		color: #2f3437;
+		color: #1a1a1a;
 		text-decoration: none;
-		background-color: #fff;
+		background-color: #f7f7f5;
 	}
 
 	.cv-skill-row {
@@ -509,6 +531,10 @@
 			gap: 1rem;
 		}
 
+		.cv-contact-grid {
+			grid-template-columns: 1fr;
+		}
+
 		.cv-headshot {
 			width: 104px;
 			flex-basis: 104px;
@@ -526,8 +552,18 @@
 	}
 
 	@media all and (max-width: 700px) {
+		main#cv {
+			padding-top: 1rem;
+			padding-bottom: 3rem;
+		}
+
+		.cv-header-card {
+			border-radius: 20px;
+			padding: 1.35rem;
+		}
+
 		#cv-title {
-			font-size: 2.2rem;
+			font-size: 2.15rem;
 		}
 
 		#cv-subtitle {
