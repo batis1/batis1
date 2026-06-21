@@ -184,14 +184,10 @@
 	</section>
 
 	<div class="cv-intro">
-		My research focuses on making <strong class="cv-ai"
-			>machine learning</strong
-		>
-		models that are more
-		<strong class="cv-ai-2">interpretable</strong> and
-		<strong class="cv-ai-2">trustworthy</strong>
-		through <strong class="cv-vis">ML visualizations</strong> and mechanistic
-		understanding.
+		I study how <strong class="cv-ai">machine learning</strong> models work
+		internally and how <strong class="cv-vis">visualizations</strong> can make
+		them more <strong class="cv-ai-2">interpretable</strong> and
+		<strong class="cv-ai-2">trustworthy</strong>.
 	</div>
 
 	<hr />
