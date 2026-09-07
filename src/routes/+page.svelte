@@ -4,8 +4,8 @@
 		subtitle: "CS PhD Student @ USTC",
 		location: "USTC, Hefei, China",
 		email: "batis2019@gmail.com",
-		phone: "(+86) 15658563280",
-		cv: "./mainCV.pdf?v=20260313",
+		x: "https://x.com/m__batis",
+		cv: "./mainCV.pdf?v=20260907",
 		github: "https://github.com/batis1",
 		scholar: "https://scholar.google.com/citations?user=7lz2lbUAAAAJ&hl=en",
 		image: "./profile_picture.jpg",
@@ -42,34 +42,35 @@
 		},
 	];
 
-	const publications = [
-		{
-			year: "2024",
-			title: "ACGRIME: Adaptive Chaotic Gaussian RIME Optimizer for Global Optimization and Feature Selection",
-			venue: "Cluster Computing Journal",
-			status: "Published",
-			link: "https://link.springer.com/article/10.1007/s10586-024-04716-9",
-		},
-		{
-			year: "2024",
-			title: "Prey Capture Enhanced Harris Hawks Optimizer for Wrapper-based Feature Selection in High-Dimensional Medical Data",
-			venue: "Computer Methods and Programs in Biomedicine",
-			status: "Published",
-			link: "https://www.sciencedirect.com/science/article/pii/S0169260726000052",
-		},
-		{
-			year: "2024",
-			title: "Random differential RIME optimization for multi-threshold segmentation in dermoscopic skin cancer images",
-			venue: "Biomedical Signal Processing and Control",
-			status: "Under second revision",
-		},
-		{
-			year: "2024",
-			title: "An enhanced bat optimizer with elite selection and crisscross strategies for multi-threshold image segmentation of lupus nephritis",
-			venue: "International Journal of Computational Intelligence Systems",
-			status: "Under review",
-		},
-	];
+const publications = [
+    {
+        "year": "2026",
+        "title": "Random differential RIME optimization for multi-threshold segmentation in dermoscopic skin cancer images",
+        "authors": "M. Batis, Q. Shao, L. Liu, A. A. Heidari, H. Chen",
+        "venue": "Biomedical Signal Processing and Control, 123, 110533",
+        "citations": 0,
+        "link": "https://www.sciencedirect.com/science/article/pii/S1746809426010876",
+        "citationLink": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7lz2lbUAAAAJ&citation_for_view=7lz2lbUAAAAJ:IjCSPb-OGe4C"
+    },
+    {
+        "year": "2026",
+        "title": "Prey capture enhanced Harris hawks optimizer for wrapper-based feature selection in high-dimensional medical data",
+        "authors": "M. Batis, Y. Chen, L. Liu, A. A. Heidari, H. Chen",
+        "venue": "Computer Methods and Programs in Biomedicine, 109237",
+        "citations": 2,
+        "link": "https://www.sciencedirect.com/science/article/pii/S0169260726000052",
+        "citationLink": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13749162886429041367"
+    },
+    {
+        "year": "2025",
+        "title": "ACGRIME: adaptive chaotic Gaussian RIME optimizer for global optimization and feature selection",
+        "authors": "M. Batis, Y. Chen, M. Wang, L. Liu, A. A. Heidari, H. Chen",
+        "venue": "Cluster Computing, 28(1), 61",
+        "citations": 19,
+        "link": "https://link.springer.com/article/10.1007/s10586-024-04716-9",
+        "citationLink": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13203526887198718385"
+    }
+];
 
 	const projects = [
 		{
@@ -81,6 +82,7 @@
 	];
 
 	const awards = [
+        { date: "2025", title: "CAS-ANSO Scholarship at USTC" },
 		{
 			date: "2022",
 			title: "Chinese Government Scholarship at Wenzhou University",
@@ -105,16 +107,12 @@
 
 	const skillGroups = [
 		{
-			category: "Programming and ML",
-			skills: "Python, PyTorch, MATLAB",
+			category: "Programming",
+			skills: "Python, JavaScript, MATLAB, PyTorch",
 		},
 		{
 			category: "Web and Software",
-			skills: "React, Svelte, D3.js, Node.js, MongoDB, MySQL",
-		},
-		{
-			category: "Tools",
-			skills: "Git and GitHub",
+			skills: "React, Svelte, Node.js, MongoDB, MySQL",
 		},
 		{
 			category: "Languages",
@@ -122,448 +120,109 @@
 		},
 	];
 </script>
-
 <svelte:head>
-	<title>Mohammed Batis - Machine learning</title>
-	<meta
-		name="description"
-		content="Academic CV website for Mohammed Batis, focused on mechanistic interpretability, ML visualizations, and trustworthy AI."
-	/>
-	<link rel="stylesheet" href="https://use.typekit.net/qyo6xht.css" />
+<title>Mohammed Batis - Research & CV</title>
+<meta name="description" content="Mohammed Batis, CS PhD student at USTC. Mechanistic interpretability, machine learning, and optimization. Publications, education, and projects." />
 </svelte:head>
-
+<a class="skip" href="#about">Skip to content</a>
 <main id="cv">
-	<section class="cv-header-card" aria-labelledby="cv-title">
-		<div class="cv-identity">
-			<h1 id="cv-title"><a href="./">Mohammed Batis</a></h1>
-			<h3 id="cv-subtitle">{profile.subtitle}</h3>
-		</div>
-
-		<div class="cv-image-links-wrapper">
-			<div class="cv-headshot">
-				<img src={profile.image} alt={profile.name} />
-			</div>
-
-			<div class="cv-contact-grid">
-				<div class="cv-social-link">
-					<div class="cv-social-link-label">Location</div>
-					<div class="cv-social-link-text-wrapper">
-						{profile.location}
-					</div>
-				</div>
-				<div class="cv-social-link">
-					<div class="cv-social-link-label">Email</div>
-					<div class="cv-social-link-text-wrapper">
-						<a href={`mailto:${profile.email}`}>{profile.email}</a>
-					</div>
-				</div>
-				<div class="cv-social-link">
-					<div class="cv-social-link-label">CV</div>
-					<div class="cv-social-link-text-wrapper">
-						<a href={profile.cv}>CV PDF</a>
-					</div>
-				</div>
-				<div class="cv-social-link">
-					<div class="cv-social-link-label">GitHub</div>
-					<div class="cv-social-link-text-wrapper">
-						<a href={profile.github}>@batis1</a>
-					</div>
-				</div>
-				<div class="cv-social-link">
-					<div class="cv-social-link-label">Phone</div>
-					<div class="cv-social-link-text-wrapper">{profile.phone}</div>
-				</div>
-				<div class="cv-social-link">
-					<div class="cv-social-link-label">Scholar</div>
-					<div class="cv-social-link-text-wrapper">
-						<a href={profile.scholar}>Google Scholar</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<div class="cv-intro">
-		I study how <strong class="cv-ai">machine learning</strong> models work
-		internally and how <strong class="cv-vis">visualizations</strong> can make
-		them more <strong class="cv-ai-2">interpretable</strong> and
-		<strong class="cv-ai-2">trustworthy</strong>.
-	</div>
-
-	<hr />
-
-	<h2 id="education">Education</h2>
-	{#each education as item}
-		<div class="cv-left-date">{item.date}</div>
-		<b class="cv-entry-title">{item.degree}</b>
-		<div class="cv-entry-meta">{item.school}, {item.location}</div>
-		<div class="cv-description">{item.detail}</div>
-		<div class="cv-spacer"></div>
-	{/each}
-
-	<h2 id="publications">Publications</h2>
-	{#each publications as publication}
-		<div class="cv-left-date">{publication.year}</div>
-		<div>
-			{#if publication.link}
-				<a class="cv-entry-title" href={publication.link}>{publication.title}</a>
-			{:else}
-				<b class="cv-entry-title">{publication.title}</b>
-			{/if}
-		</div>
-		<div class="cv-description">
-			<i>{publication.venue}. {publication.status}.</i>
-		</div>
-		<div class="cv-spacer-large"></div>
-	{/each}
-
-	<h2 id="projects">Projects</h2>
-	{#each projects as project}
-		<div class="cv-left-date">{project.date}</div>
-		<div><a class="cv-entry-title" href={project.link}>{project.title}</a></div>
-		<div class="cv-description">{project.detail}</div>
-		<div class="pub-misc">
-			<a href={project.link}>Project link</a>
-		</div>
-		<div class="cv-spacer"></div>
-	{/each}
-
-	<h2 id="honors-and-awards">Honors and Awards</h2>
-	{#each awards as award}
-		<div class="cv-left-date">{award.date}</div>
-		<div>{award.title}</div>
-		<div class="cv-spacer-small"></div>
-	{/each}
-
-	<h2 id="technology-skills">Technology Skills</h2>
-	{#each skillGroups as group}
-		<p class="cv-skill-row">
-			<strong>{group.category}:</strong>
-			{group.skills}
-		</p>
-	{/each}
+<nav aria-label="CV navigation"><a class="monogram" href="#cv">MB</a><div><a href="#publications">Publications</a><a href="#education">Education</a><a href={profile.cv}>CV PDF</a></div></nav>
+<header><img src={profile.image} alt={profile.name} width="96" height="96" /><div><h1>{profile.name}</h1><p>{profile.subtitle}</p><span>{profile.location}</span></div></header>
+<div class="contacts"><a href={`mailto:${profile.email}`}>{profile.email}</a><a href={profile.scholar}>Google Scholar &nearr;</a><a href={profile.github}>GitHub &nearr;</a><a href={profile.x}>X @m__batis &nearr;</a></div>
+<section id="about" aria-labelledby="about-title"><h2 id="about-title">About</h2><p class="intro">I study how <strong>machine learning</strong> models work internally and how visualizations can make them more <strong>interpretable and trustworthy</strong>.</p><ul class="interests" aria-label="Research interests"><li>Mechanistic interpretability</li><li>ML visualization</li><li>Swarm optimization</li></ul></section>
+<section id="publications" aria-labelledby="publications-title">
+<div class="section-heading"><h2 id="publications-title">Publications</h2><a href={profile.scholar}>Google Scholar &nearr;</a></div>
+<dl class="metrics"><div><dt>Citations</dt><dd>21</dd></div><div><dt>h-index</dt><dd>2</dd></div></dl>
+<p class="source">Google Scholar &middot; Updated September 7, 2026</p>
+{#each publications as publication}<article class="entry publication"><div class="date">{publication.year}</div><div><h3><a href={publication.link}>{publication.title} <span aria-hidden="true">&nearr;</span></a></h3><p class="muted">{publication.authors}</p><p class="muted">{publication.venue}</p><a class="citation" href={publication.citationLink}>{publication.citations} citations</a></div></article>{/each}
+</section>
+<section id="education" aria-labelledby="education-title"><h2 id="education-title">Education</h2>{#each education as item}<article class="entry"><div class="date">{item.date}</div><div><h3>{item.degree}</h3><p>{item.school}</p><p class="muted">{item.location}</p>{#if item.detail}<p class="detail">{item.detail}</p>{/if}</div></article>{/each}</section>
+<section id="projects" aria-labelledby="projects-title"><h2 id="projects-title">Projects</h2>{#each projects as project}<article class="entry"><div class="date">{project.date}</div><div><h3><a href={project.link}>{project.title} &nearr;</a></h3><p class="detail">{project.detail}</p></div></article>{/each}</section>
+<section aria-labelledby="awards-title"><h2 id="awards-title">Honors & awards</h2>{#each awards as award}<div class="entry award"><div class="date">{award.date}</div><p>{award.title}</p></div>{/each}</section>
+<section aria-labelledby="skills-title"><h2 id="skills-title">Skills & languages</h2><dl class="skills">{#each skillGroups as group}<div><dt>{group.category}</dt><dd>{group.skills}</dd></div>{/each}</dl></section>
+<footer><span>Mohammed Batis</span><a href={profile.cv}>Download CV PDF &darr;</a><a href="#cv">Back to top &uarr;</a></footer>
 </main>
-
 <style>
-	:global(html) {
-		scroll-behavior: smooth;
-	}
+:global(*) { box-sizing: border-box; }
+:global(body) { overflow-x: clip; }
+:global(html) { scroll-behavior: smooth; scroll-padding-top: 24px; }
+:global(body) { margin: 0; background: #fffcf0; color: #261412; font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.6; letter-spacing: 0; -webkit-font-smoothing: antialiased; }
+:global(a) { color: inherit; text-decoration: none; text-underline-offset: 4px; }
+:global(a:hover) { text-decoration: underline; }
+:global(a:focus-visible) { outline: 2px solid #326b85; outline-offset: 5px; border-radius: 2px; }
+:global(::selection) { background: #d9edf6; color: #261412; }
+.skip { position: fixed; top: 8px; left: 8px; padding: 8px 16px; background: #fffcf0; z-index: 5; transform: translateY(-160%); }
+.skip:focus { transform: translateY(0); }
+main { position: relative; max-width: 800px; margin: 0 auto; min-height: 100vh; }
+main::before, main::after { content: ""; position: absolute; top: 0; bottom: 0; width: 1px; background: #e4e0d6; pointer-events: none; }
+main::before { left: 16px; }
+main::after { right: 16px; }
+nav { display: flex; align-items: center; justify-content: space-between; min-height: 64px; padding: 16px 32px; font-size: 13px; }
+nav div { display: flex; gap: 24px; }
+.monogram { font-weight: 700; font-size: 16px; }
+header { display: flex; align-items: center; gap: 24px; padding: 48px 32px 32px; }
+header img { width: 96px; height: 96px; flex-shrink: 0; border-radius: 50%; object-fit: cover; object-position: center top; mix-blend-mode: multiply; border: 1px solid #e4e0d6; }
+h1 { font-size: 30px; line-height: 1.2; font-weight: 600; margin: 0 0 8px; text-wrap: balance; }
+header p { margin: 0 0 4px; }
+header span { color: #70665e; font-size: 14px; }
+.contacts { display: grid; grid-template-columns: 1.35fr 1fr; gap: 12px 24px; padding: 20px 32px; font-size: 14px; }
+.contacts a { width: fit-content; overflow-wrap: anywhere; }
+section { padding: 30px 32px; }
+.contacts, section, footer { position: relative; }
+.contacts::before, section::before, footer::before { content: ""; display: block; position: absolute; top: 0; left: 50%; width: 100vw; transform: translateX(-50%); height: 32px; border-block: 1px solid #e4e0d6; background: repeating-linear-gradient(135deg, transparent 0 6px, #e4e0d680 6px 7px); pointer-events: none; }
+.contacts { padding-top: 28px; }
+footer { margin-top: 10px; }
 
-	:global(body) {
-		margin: 0;
-		background: #f4f4f2;
-		color: #1a1a1a;
-		font-family: "SF Pro Display", "Helvetica Neue", "Switzer", sans-serif;
-	}
-
-	:global(*) {
-		box-sizing: border-box;
-	}
-
-	:global(a) {
-		color: inherit;
-		text-decoration: none;
-	}
-
-	main#cv {
-		font-family: "SF Pro Display", "Helvetica Neue", "Switzer", sans-serif;
-		display: grid;
-		justify-items: stretch;
-		grid-template-columns:
-			[screen-start] 1fr
-			[page-start kicker-start] minmax(min-content, 3.5rem)
-			[middle-start] minmax(min-content, 3.5rem)
-			[text-start kicker-end] repeat(8, minmax(min-content, 3.5rem))
-			[text-end gutter-start] minmax(min-content, 3.5rem)
-			[middle-end] minmax(min-content, 3.5rem)
-			[page-end gutter-end] 1fr
-			[screen-end];
-		grid-column-gap: 1.5rem;
-		padding-top: 4rem;
-		padding-bottom: 5rem;
-		line-height: 1.6;
-		color: #1a1a1a;
-		-webkit-font-smoothing: antialiased;
-	}
-
-	main#cv > * {
-		grid-column: text-start / page-end;
-	}
-
-	main#cv h1 {
-		font-size: 2.85rem;
-		margin: 0;
-		line-height: 1.05;
-	}
-
-	main#cv h2 {
-		font-size: 0.78rem;
-		margin-top: 3.25rem;
-		margin-bottom: 1.25rem;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.12em;
-		color: #737373;
-		border-bottom: 1px solid #deded9;
-		padding-bottom: 0.75rem;
-	}
-
-	main#cv hr {
-		margin: 2.25rem 0 0;
-		border: 0;
-		border-top: 1px solid #deded9;
-	}
-
-	#cv-title {
-		font-weight: 700;
-		line-height: 1;
-		font-size: 3rem;
-		letter-spacing: 0;
-		color: #0e0e0e;
-		margin-bottom: 0;
-		font-family: "SF Pro Display", "Helvetica Neue", "Switzer", sans-serif;
-	}
-
-	#cv-title a,
-	#cv-title a:hover {
-		color: #0e0e0e;
-		font-weight: 700;
-		text-decoration: none;
-	}
-
-	#cv-subtitle {
-		font-family: "SF Pro Display", "Helvetica Neue", "Switzer", sans-serif;
-		font-size: 0.95rem;
-		font-weight: 500;
-		line-height: 1.2;
-		color: #737373;
-		margin: 0.35rem 0 1.2rem;
-	}
-
-	.cv-header-card {
-		display: grid;
-		gap: 1.75rem;
-		background: #fff;
-		border-radius: 24px;
-		box-shadow: 0 18px 50px rgba(25, 25, 20, 0.08);
-		padding: 2rem;
-	}
-
-	.cv-identity {
-		border-bottom: 1px solid #e6e6e3;
-		padding-bottom: 1.35rem;
-	}
-
-	.cv-intro {
-		margin-top: 2rem;
-		margin-bottom: 0.75rem;
-		line-height: 1.65;
-		font-size: 1.04rem;
-		max-width: 46rem;
-	}
-
-	.cv-ai,
-	.cv-ai-2,
-	.cv-vis {
-		border-radius: 9999px;
-		padding: 0.05rem 0.45rem;
-		font-weight: 600;
-		background-color: #edf3ec;
-		color: #346538;
-	}
-
-	.cv-image-links-wrapper {
-		display: flex;
-		font-size: 0.86rem;
-		gap: 1.6rem;
-		align-items: flex-start;
-	}
-
-	.cv-headshot {
-		width: 96px;
-		flex: 0 0 96px;
-	}
-
-	.cv-headshot img {
-		width: 96px;
-		height: 96px;
-		object-fit: cover;
-		object-position: center top;
-		border-radius: 18px;
-		display: block;
-		box-shadow: 0 8px 24px rgba(25, 25, 20, 0.08);
-	}
-
-	.cv-contact-grid {
-		display: grid;
-		flex: 1;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		column-gap: 2rem;
-		row-gap: 0.45rem;
-	}
-
-	.cv-social-link {
-		display: grid;
-		grid-template-columns: 4.5rem minmax(0, 1fr);
-		gap: 0.7rem;
-		min-width: 0;
-	}
-
-	.cv-social-link-label {
-		color: #8a8a86;
-		font-size: 0.68rem;
-		font-weight: 700;
-		letter-spacing: 0.12em;
-		text-transform: uppercase;
-	}
-
-	.cv-social-link-text-wrapper {
-		min-width: 0;
-		overflow-wrap: anywhere;
-	}
-
-	.cv-social-link-text-wrapper > a {
-		color: #1a1a1a;
-	}
-
-	.cv-left-date {
-		grid-column: kicker;
-		text-align: right;
-		font-size: 0.68rem;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		padding-top: 0.18rem;
-		color: #8a8a86;
-		font-family: "SF Mono", "Geist Mono", "JetBrains Mono", monospace;
-	}
-
-	.cv-entry-title {
-		color: #111;
-		font-size: 1rem;
-		font-weight: 600;
-		line-height: 1.45;
-	}
-
-	.cv-entry-meta {
-		line-height: 1.45;
-	}
-
-	.cv-description {
-		color: #737373;
-		font-size: 0.9rem;
-		font-weight: 400;
-		line-height: 1.55;
-		margin-top: 0.18rem;
-	}
-
-	.cv-spacer-large {
-		height: 1.15rem;
-		display: block;
-	}
-
-	.cv-spacer {
-		height: 0.95rem;
-		display: block;
-	}
-
-	.cv-spacer-small {
-		height: 0.25rem;
-		display: block;
-	}
-
-	.pub-misc {
-		font-size: 0.7rem;
-		margin-top: 0.3rem;
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.3rem;
-		align-items: center;
-	}
-
-	.pub-misc a {
-		color: #737373;
-		white-space: nowrap;
-		background-color: #fff;
-		border: 1px solid #deded9;
-		padding: 0.15rem 0.45rem;
-		border-radius: 9999px;
-		transition:
-			background-color 0.2s ease,
-			color 0.2s ease;
-	}
-
-	.pub-misc a:hover {
-		color: #1a1a1a;
-		text-decoration: none;
-		background-color: #f7f7f5;
-	}
-
-	.cv-skill-row {
-		margin: 0.35rem 0;
-	}
-
-	@media screen and (max-width: 768px) {
-		main#cv {
-			grid-template-columns:
-				[screen-start] 8px
-				[page-start kicker-start text-start gutter-start middle-start] repeat(
-					8,
-					1fr
-				)
-				[text-end page-end gutter-end kicker-end middle-end] 8px
-				[screen-end];
-			grid-column-gap: 0.5rem;
-		}
-
-		.cv-left-date {
-			text-align: left;
-			grid-column: text-start / page-end;
-			margin-top: 0.6rem;
-		}
-
-		.cv-image-links-wrapper {
-			display: grid;
-			gap: 1rem;
-		}
-
-		.cv-contact-grid {
-			grid-template-columns: 1fr;
-		}
-
-		.cv-headshot {
-			width: 104px;
-			flex-basis: 104px;
-			margin-bottom: 1rem;
-		}
-
-		.cv-headshot img {
-			width: 104px;
-			height: 104px;
-		}
-
-		.cv-social-link {
-			grid-template-columns: 4.25rem minmax(0, 1fr);
-		}
-	}
-
-	@media all and (max-width: 700px) {
-		main#cv {
-			padding-top: 1rem;
-			padding-bottom: 3rem;
-		}
-
-		.cv-header-card {
-			border-radius: 20px;
-			padding: 1.35rem;
-		}
-
-		#cv-title {
-			font-size: 2.15rem;
-		}
-
-		#cv-subtitle {
-			font-size: 0.85rem;
-		}
-	}
+h2 { font-size: 20px; line-height: 1.4; font-weight: 600; margin: 0 0 20px; }
+.intro { margin: 0; max-width: 64ch; text-wrap: pretty; }
+strong { font-weight: 600; }
+.interests { display: flex; flex-wrap: wrap; gap: 8px 20px; list-style: none; margin: 20px 0 0; padding: 0; font-size: 13px; color: #526a59; }
+.interests li:nth-child(2) { color: #326b85; }
+.interests li:nth-child(3) { color: #806046; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.section-heading > a { font-size: 13px; color: #70665e; }
+.metrics { display: grid; grid-template-columns: repeat(2,1fr); margin: 0; padding: 16px 20px; background: transparent; border-radius: 6px; }
+.metrics div { display: flex; flex-direction: column-reverse; padding-left: 24px;  }
+.metrics div:first-child { padding-left: 0; border: 0; }
+.metrics dt { font-size: 13px; color: #70665e; }
+.metrics dd { margin: 0; font-size: 24px; font-weight: 600; line-height: 1.4; font-variant-numeric: tabular-nums; }
+.source { font-size: 12px; color: #70665e; margin: 10px 0 4px; }
+.entry { display: grid; grid-template-columns: 116px minmax(0,1fr); gap: 20px; padding: 16px 0; }
+.entry:last-child { padding-bottom: 0; }
+.date { font-size: 13px; color: #70665e; padding-top: 2px; font-variant-numeric: tabular-nums; }
+h3 { font-size: 16px; line-height: 1.5; font-weight: 600; margin: 0 0 5px; text-wrap: pretty; }
+.entry p { margin: 3px 0 0; font-size: 14px; }
+.entry .detail { margin-top: 8px; color: #70665e; text-wrap: pretty; }
+.muted { color: #70665e; }
+.publication { padding-block: 22px; }
+.publication + .publication { border-top: 0; }
+.citation { display: inline-block; margin-top: 10px; color: #326b85; font-size: 13px; }
+.award { padding-block: 9px; }
+.award p { margin: 0; }
+.skills { margin: 0; font-size: 14px; }
+.skills div { display: grid; grid-template-columns: 160px minmax(0,1fr); gap: 20px; padding: 7px 0; }
+.skills dt { color: #70665e; }
+.skills dd { margin: 0; }
+footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding: 24px 32px; font-size: 12px; color: #70665e; }
+@media (max-width: 560px) {
+main::before { left: 4px; }
+main::after { right: 4px; }
+nav { padding: 16px 20px; } nav div { gap: 16px; }
+header { padding: 32px 20px 24px; gap: 16px; } header img { width: 72px; height: 72px; }
+h1 { font-size: 24px; } header p { font-size: 14px; } header span { font-size: 13px; }
+.contacts { padding: 18px 20px; grid-template-columns: 1fr; gap: 10px; }
+section { padding: 26px 20px; } .entry { grid-template-columns: 1fr; gap: 5px; }
+.section-heading > a { font-size: 12px; }
+.skills div { grid-template-columns: 1fr; gap: 2px; padding-block: 8px; }
+footer { padding: 24px 20px; }
+}
+.contacts { padding-top: 50px; }
+section { padding-top: 52px; }
+footer { padding-top: 46px; }
+@media (max-width: 560px) {
+    .contacts { padding-top: 40px; }
+    section { padding-top: 48px; }
+}
+@media (prefers-reduced-motion: reduce) { :global(html) { scroll-behavior: auto; } }
+@media print { :global(body), main { background: white; } main { border: 0; } nav, .skip, footer { display: none; } section { padding-block: 18px; } .entry { break-inside: avoid; } }
 </style>

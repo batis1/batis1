@@ -8,7 +8,7 @@
   \usepackage{lmodern}
 \else
   \usepackage{fontspec}
-  \setmainfont{TeX Gyre Termes}
+  \setmainfont{TeX Gyre Heros}
 \fi
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem}
@@ -21,7 +21,7 @@
 \setlength{\parskip}{0.35em}
 \setlist[itemize]{leftmargin=1.4em, itemsep=0.25em, topsep=0.25em}
 
-\definecolor{heading}{RGB}{16,63,54}
+\definecolor{heading}{RGB}{38,20,18}
 
 \titleformat{\section}{\large\bfseries\color{heading}}{}{0pt}{}
 \titlespacing*{\section}{0pt}{1.1em}{0.5em}
@@ -34,9 +34,12 @@
 }
 
 \newcommand{\cventry}[4]{
+  \begin{minipage}{\linewidth}
   \textbf{#1} \hfill #2 \\
   \emph{#3} \\
   #4
+  \end{minipage}
+  \par
   \vspace{0.65em}
 }
 
@@ -45,7 +48,7 @@
 {\LARGE \textbf{Mohammed Batis}}\\[0.35em]
 USTC, Hefei, China \\
 Email: \href{mailto:batis2019@gmail.com}{batis2019@gmail.com} \quad
-Phone: (+86) 15658563280 \\
+X: \href{https://x.com/m__batis}{@m\_\_batis} \\
 Page: \href{https://batis1.github.io/batis1/}{https://batis1.github.io/batis1/} \\
 Date of Birth: 09/12/1998 \quad Nationality: Yemeni
 
@@ -85,29 +88,26 @@ My research interests lie in mechanistic interpretability and trustworthy AI. I 
   {Final grade: 98.63\%.}
 
 \cvsection{Publications}
-\cventry
-  {ACGRIME: Adaptive Chaotic Gaussian RIME Optimizer for Global Optimization and Feature Selection}
-  {2024}
-  {Cluster Computing Journal}
-  {Published. \href{https://link.springer.com/article/10.1007/s10586-024-04716-9}{Article link}.}
-
-\cventry
-  {Prey Capture Enhanced Harris Hawks Optimizer for Wrapper-based Feature Selection in High-Dimensional Medical Data}
-  {2024}
-  {Computer Methods and Programs in Biomedicine}
-  {Published. \href{https://www.sciencedirect.com/science/article/pii/S0169260726000052}{Article link}.}
+\href{https://scholar.google.com/citations?user=7lz2lbUAAAAJ\&hl=en}{Google Scholar}: 21 citations, h-index: 2.\\
+{\small Metrics updated September 7, 2026.}
 
 \cventry
   {Random differential RIME optimization for multi-threshold segmentation in dermoscopic skin cancer images}
-  {2024}
-  {Biomedical Signal Processing and Control}
-  {Under second revision.}
+  {2026}
+  {Biomedical Signal Processing and Control, 123, 110533}
+  {M. Batis, Q. Shao, L. Liu, A. A. Heidari, H. Chen. 0 citations. \href{https://www.sciencedirect.com/science/article/pii/S1746809426010876}{Article link}.}
 
 \cventry
-  {An enhanced bat optimizer with elite selection and crisscross strategies for multi-threshold image segmentation of lupus nephritis}
-  {2024}
-  {International Journal of Computational Intelligence Systems}
-  {Under review.}
+  {Prey capture enhanced Harris hawks optimizer for wrapper-based feature selection in high-dimensional medical data}
+  {2026}
+  {Computer Methods and Programs in Biomedicine, 109237}
+  {M. Batis, Y. Chen, L. Liu, A. A. Heidari, H. Chen. 2 citations. \href{https://www.sciencedirect.com/science/article/pii/S0169260726000052}{Article link}.}
+
+\cventry
+  {ACGRIME: adaptive chaotic Gaussian RIME optimizer for global optimization and feature selection}
+  {2025}
+  {Cluster Computing, 28(1), 61}
+  {M. Batis, Y. Chen, M. Wang, L. Liu, A. A. Heidari, H. Chen. 19 citations. \href{https://link.springer.com/article/10.1007/s10586-024-04716-9}{Article link}.}
 
 \cvsection{Project}
 \cventry
@@ -118,6 +118,7 @@ My research interests lie in mechanistic interpretability and trustworthy AI. I 
 
 \cvsection{Honours and Awards}
 \begin{itemize}
+  \item CAS-ANSO Scholarship at USTC (2025)
   \item Chinese Government Scholarship at Wenzhou University (10/07/2022)
   \item Excellent Graduation Design Award at Wenzhou University (20/06/2022)
   \item Zhejiang Government Scholarship at Wenzhou University (09/10/2021)
@@ -127,10 +128,8 @@ My research interests lie in mechanistic interpretability and trustworthy AI. I 
 
 \cvsection{Technical Skills}
 \begin{itemize}
-  \item Python, PyTorch, MATLAB
-  \item React.js, Node.js
-  \item MongoDB, MySQL
-  \item Git and GitHub
+  \item Programming: Python, JavaScript, MATLAB, PyTorch
+  \item Web and Software: React, Svelte, Node.js, MongoDB, MySQL
 \end{itemize}
 
 \cvsection{Languages}
