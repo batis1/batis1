@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#103f36" />
-  <text
-    x="50%"
-    y="50%"
-    dominant-baseline="middle"
-    text-anchor="middle"
-    font-family="Arial, sans-serif"
-    font-size="26"
-    font-weight="700"
-    fill="#f7f2ea"
-  >
-    ML
-  </text>
+  <path d="M2 32 32 12 62 32v5L32 57 2 37Z" fill="#a5a597" />
+  <path d="M2 32 32 8 62 32 32 53Z" fill="#d6d5c5" />
+  <g transform="matrix(.75 .525 -.75 .525 32 9)">
+    <g fill="none" stroke="#938a6c" stroke-width="2.5">
+      <path d="M7 0v7m7-7v7m7-7v7m7-7v7m7-7v7M7 35v7m7-7v7m7-7v7m7-7v7m7-7v7M0 7h7m-7 7h7m-7 7h7m-7 7h7m-7 7h7M35 7h7m-7 7h7m-7 7h7m-7 7h7m-7 7h7" />
+    </g>
+    <path d="M6 6h30v30H6Z" fill="#33494a" />
+    <path d="M10 10h17v22H10Z" fill="#809c94" />
+    <path d="M29 10h3v22h-3Z" fill="#b6c6bb" />
+    <g stroke="#c4b58d" stroke-width=".9">
+      <path d="M10 14h17m-17 4h17m-17 4h17m-17 4h17m-17 4h17M14 10v22m4-22v22m4-22v22" />
+    </g>
+  </g>
 </svg>
