@@ -1,4 +1,5 @@
 <script lang="ts">
+    import ChipScene from '$lib/ChipScene.svelte';
 	const profile = {
 		name: "Mohammed Batis",
 		subtitle: "CS PhD Student @ USTC",
@@ -127,9 +128,20 @@ const publications = [
 <a class="skip" href="#about">Skip to content</a>
 <main id="cv">
 <nav aria-label="CV navigation"><a class="monogram" href="#cv">MB</a><div><a href="#publications">Publications</a><a href="#education">Education</a><a href={profile.cv}>CV PDF</a></div></nav>
+<ChipScene />
 <header><img src={profile.image} alt={profile.name} width="96" height="96" /><div><h1>{profile.name}</h1><p>{profile.subtitle}</p><span>{profile.location}</span></div></header>
 <div class="contacts"><a href={`mailto:${profile.email}`}>{profile.email}</a><a href={profile.scholar}>Google Scholar &nearr;</a><a href={profile.github}>GitHub &nearr;</a><a href={profile.x}>X @m__batis &nearr;</a></div>
-<section id="about" aria-labelledby="about-title"><h2 id="about-title">About</h2><p class="intro">I study how <strong>machine learning</strong> models work internally and how visualizations can make them more <strong>interpretable and trustworthy</strong>.</p><ul class="interests" aria-label="Research interests"><li>Mechanistic interpretability</li><li>ML visualization</li><li>Swarm optimization</li></ul></section>
+<section id="about" aria-labelledby="about-title">
+    <h2 id="about-title">About</h2>
+    <div class="about-topic">
+        <h3>Research</h3>
+        <p class="intro">I study the <strong>mechanistic interpretability of language-only LLMs</strong>, combining game-theoretic interactions with causal analysis to understand how model components jointly shape behavior.</p>
+    </div>
+    <div class="about-topic">
+        <h3>Design & engineering</h3>
+        <p class="intro">I enjoy design engineering, logic, and ideation, with a broad interest in how ideas become thoughtfully designed systems. I am currently reading about <strong>AI accelerator hardware</strong>, chip limitations, and the design decisions shaped by those constraints.</p>
+    </div>
+</section>
 <section id="publications" aria-labelledby="publications-title">
 <div class="section-heading"><h2 id="publications-title">Publications</h2><a href={profile.scholar}>Google Scholar &nearr;</a></div>
 <dl class="metrics"><div><dt>Citations</dt><dd>21</dd></div><div><dt>h-index</dt><dd>2</dd></div></dl>
@@ -176,9 +188,8 @@ footer { margin-top: 10px; }
 h2 { font-size: 20px; line-height: 1.4; font-weight: 600; margin: 0 0 20px; }
 .intro { margin: 0; max-width: 64ch; text-wrap: pretty; }
 strong { font-weight: 600; }
-.interests { display: flex; flex-wrap: wrap; gap: 8px 20px; list-style: none; margin: 20px 0 0; padding: 0; font-size: 13px; color: #526a59; }
-.interests li:nth-child(2) { color: #326b85; }
-.interests li:nth-child(3) { color: #806046; }
+.about-topic + .about-topic { margin-top: 24px; }
+.about-topic h3 { margin-bottom: 8px; }
 .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
 .section-heading > a { font-size: 13px; color: #70665e; }
 .metrics { display: grid; grid-template-columns: repeat(2,1fr); margin: 0; padding: 16px 20px; background: transparent; border-radius: 6px; }
