@@ -80,6 +80,18 @@ const publications = [
 			detail: "A gamified web platform for Chinese HSK preparation with interactive practice, progress tracking, and software copyright registration in China (2025SR0444242).",
 			link: "https://whsk.tech/",
 		},
+		{
+			date: "2026 - Present",
+			title: "Wonder TOEFL: Interactive TOEFL Practice Platform",
+			detail: "A comprehensive TOEFL practice platform with reading, listening, speaking, and writing exercises, full-length tests, progress tracking, and vocabulary tools.",
+			link: "https://wondertoefl.vercel.app/reading",
+		},
+		{
+			date: "2026 - Present",
+			title: "CNN Lens: Interactive CNN Visualization",
+			detail: "An interactive visual learning tool for exploring convolutional neural networks, from image channels and learned filters to feature maps, dense layers, and class predictions.",
+			link: "https://cnn-lens.vercel.app/",
+		},
 	];
 
 	const awards = [
