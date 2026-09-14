@@ -186,7 +186,6 @@
         {#if failed}<span class="fallback">Compute array / Memory / Interconnects</span>{/if}
     </div>
     <div class="caption">
-        <a href="https://www.eecg.utoronto.ca/~roman/professional/pubs/pdfs/tnn03_ktron_ieee.pdf" title="Visual reference: Kerneltron, Genov and Cauwenberghs, Fig. 3(b)">Compute in silicon <span> / Kerneltron-inspired study &nearr;</span></a>
         {#if ready}<button onclick={() => setPaused(!paused)} aria-label={paused ? 'Play chip animation' : 'Pause chip animation'}>{paused ? 'Play' : 'Pause'}</button>{/if}
     </div>
 </div>
@@ -195,12 +194,10 @@
     .chip-banner { position: relative; margin: 0 16px; border-block: 1px solid #e4e0d6; }
     .scene { height: 280px; width: 100%; background-image: radial-gradient(#d4cdbc80 0.6px, transparent 0.6px); background-size: 12px 12px; }
     .scene :global(canvas) { display: block; width: 100%; height: 100%; }
-    .caption { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 16px 12px; font-size: 11px; color: #70665e; }
-    .caption a { text-decoration: none; }
-    .caption a:hover { text-decoration: underline; }
+    .caption { display: flex; align-items: center; justify-content: flex-end; gap: 12px; padding: 0 16px 12px; font-size: 11px; color: #70665e; }
     button { font: inherit; color: inherit; background: transparent; border: 0; padding: 8px; cursor: pointer; min-width: 44px; min-height: 32px; }
     button:focus-visible { outline: 2px solid #70665e; outline-offset: 2px; }
     .fallback { display: grid; height: 100%; place-content: center; color: #70665e; font-size: 14px; }
-    @media (max-width: 560px) { .chip-banner { margin-inline: 4px; } .scene { height: 230px; } .caption span { display: none; } }
+    @media (max-width: 560px) { .chip-banner { margin-inline: 4px; } .scene { height: 230px; } }
     @media print { .chip-banner { display: none; } }
 </style>

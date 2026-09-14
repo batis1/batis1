@@ -127,7 +127,7 @@ const publications = [
 </svelte:head>
 <a class="skip" href="#about">Skip to content</a>
 <main id="cv">
-<nav aria-label="CV navigation"><a class="monogram" href="#cv">MB</a><div><a href="#publications">Publications</a><a href="#education">Education</a><a href={profile.cv}>CV PDF</a></div></nav>
+<nav aria-label="CV navigation"><a class="monogram" href="#cv">MB</a><div><a href="#publications">Publications</a><a href="#projects">Projects</a><a href="#education">Education</a><a href={profile.cv}>CV PDF</a></div></nav>
 <ChipScene />
 <header><img src={profile.image} alt={profile.name} width="96" height="96" /><div><h1>{profile.name}</h1><p>{profile.subtitle}</p><span>{profile.location}</span></div></header>
 <div class="contacts"><a href={`mailto:${profile.email}`}>{profile.email}</a><a href={profile.scholar}>Google Scholar &nearr;</a><a href={profile.github}>GitHub &nearr;</a><a href={profile.x}>X @m__batis &nearr;</a></div>
