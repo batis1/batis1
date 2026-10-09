@@ -1,5 +1,10 @@
 <script lang="ts">
-    import ChipScene from '$lib/ChipScene.svelte';
+    import { base } from '$app/paths';
+	const bodyProgress = {
+		months: 3,
+		weight: { before: 85, after: 69 },
+		bodyFat: { before: 27, after: 15 },
+	};
 	const profile = {
 		name: "Mohammed Batis",
 		subtitle: "CS PhD Student @ USTC",
@@ -140,7 +145,24 @@ const publications = [
 <a class="skip" href="#about">Skip to content</a>
 <main id="cv">
 <nav aria-label="CV navigation"><a class="monogram" href="#cv">MB</a><div><a href="#publications">Publications</a><a href="#projects">Projects</a><a href="#education">Education</a><a href={profile.cv}>CV PDF</a></div></nav>
-<ChipScene />
+<div class="personal-banner">
+    <figure class="hardware-photo">
+        <img src={`${base}/hardware-chip.png`} alt="Angled view of an AI accelerator chip with a dense compute array and gold interconnects" width="435" height="261" fetchpriority="high" />
+    </figure>
+    <aside class="body-progress" aria-labelledby="body-progress-title">
+        <div class="progress-heading"><h2 id="body-progress-title">Body progress</h2><span>{bodyProgress.months} months</span></div>
+        <dl class="progress-stats">
+            <div>
+                <dt>Weight</dt>
+                <dd><div class="progress-values"><span class="before">{bodyProgress.weight.before}<small>kg</small></span><span class="progress-arrow" aria-label="to">&rarr;</span><strong>{bodyProgress.weight.after}<small>kg</small></strong></div><span class="progress-change">{bodyProgress.weight.before - bodyProgress.weight.after} kg lost</span></dd>
+            </div>
+            <div>
+                <dt>Body fat</dt>
+                <dd><div class="progress-values"><span class="before">{bodyProgress.bodyFat.before}<small>%</small></span><span class="progress-arrow" aria-label="to">&rarr;</span><strong>{bodyProgress.bodyFat.after}<small>%</small></strong></div><span class="progress-change">Down {bodyProgress.bodyFat.before - bodyProgress.bodyFat.after} percentage points</span></dd>
+            </div>
+        </dl>
+    </aside>
+</div>
 <header><img src={profile.image} alt={profile.name} width="96" height="96" /><div><h1>{profile.name}</h1><p>{profile.subtitle}</p><span>{profile.location}</span></div></header>
 <div class="contacts"><a href={`mailto:${profile.email}`}>{profile.email}</a><a href={profile.scholar}>Google Scholar &nearr;</a><a href={profile.github}>GitHub &nearr;</a><a href={profile.x}>X @m__batis &nearr;</a></div>
 <section id="about" aria-labelledby="about-title">
@@ -181,9 +203,27 @@ main { position: relative; max-width: 800px; margin: 0 auto; min-height: 100vh; 
 main::before, main::after { content: ""; position: absolute; top: 0; bottom: 0; width: 1px; background: #e4e0d6; pointer-events: none; }
 main::before { left: 16px; }
 main::after { right: 16px; }
-nav { display: flex; align-items: center; justify-content: space-between; min-height: 64px; padding: 16px 32px; font-size: 13px; }
-nav div { display: flex; gap: 24px; }
+nav { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; min-height: 64px; padding: 16px 32px; font-size: 13px; }
+nav div { display: flex; flex-wrap: wrap; gap: 8px 24px; }
 .monogram { font-weight: 700; font-size: 16px; }
+.personal-banner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; margin: 0 16px; border-block: 1px solid #e4e0d6; }
+.hardware-photo { margin: 0; padding: 20px 8px; min-width: 0; }
+.hardware-photo img { display: block; width: 100%; height: auto; aspect-ratio: 435 / 261; object-fit: contain; }
+.body-progress { min-width: 0; padding: 28px 24px; border-left: 1px solid #e4e0d6; }
+.progress-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+.progress-heading h2 { margin: 0; font-size: 18px; }
+.progress-heading > span { font-size: 12px; color: #70665e; white-space: nowrap; }
+.progress-stats { margin: 20px 0 0; }
+.progress-stats > div + div { margin-top: 18px; padding-top: 18px; border-top: 1px solid #e4e0d6; }
+.progress-stats dt { font-size: 12px; margin-bottom: 6px; }
+.progress-stats dd { margin: 0; }
+.progress-values { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; font-size: 28px; line-height: 1.3; font-variant-numeric: tabular-nums; }
+.progress-values > span:not(.progress-arrow), .progress-values > strong { white-space: nowrap; }
+.progress-values small { font-size: 14px; margin-left: 4px; }
+.progress-values .before { color: #70665e; }
+.progress-values strong { color: #326b85; }
+.progress-arrow { color: #a49c91; font-size: 18px; }
+.progress-change { display: block; margin-top: 6px; font-size: 11px; color: #70665e; }
 header { display: flex; align-items: center; gap: 24px; padding: 48px 32px 32px; }
 header img { width: 96px; height: 96px; flex-shrink: 0; border-radius: 50%; object-fit: cover; object-position: center top; mix-blend-mode: multiply; border: 1px solid #e4e0d6; }
 h1 { font-size: 30px; line-height: 1.2; font-weight: 600; margin: 0 0 8px; text-wrap: balance; }
@@ -227,10 +267,21 @@ h3 { font-size: 16px; line-height: 1.5; font-weight: 600; margin: 0 0 5px; text-
 .skills dt { color: #70665e; }
 .skills dd { margin: 0; }
 footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding: 24px 32px; font-size: 12px; color: #70665e; }
+@media (max-width: 680px) {
+.personal-banner { grid-template-columns: minmax(0, 1fr); }
+.hardware-photo { padding: 16px 20px; }
+.hardware-photo img { max-width: 435px; margin-inline: auto; }
+.body-progress { border-left: 0; border-top: 1px solid #e4e0d6; padding: 24px 20px; }
+.progress-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.progress-stats > div + div { margin-top: 0; padding-top: 0; border-top: 0; }
+.progress-values { font-size: 24px; gap: 8px; }
+.progress-values small { font-size: 12px; }
+}
 @media (max-width: 560px) {
 main::before { left: 4px; }
 main::after { right: 4px; }
 nav { padding: 16px 20px; } nav div { gap: 16px; }
+.personal-banner { margin-inline: 4px; }
 header { padding: 32px 20px 24px; gap: 16px; } header img { width: 72px; height: 72px; }
 h1 { font-size: 24px; } header p { font-size: 14px; } header span { font-size: 13px; }
 .contacts { padding: 18px 20px; grid-template-columns: 1fr; gap: 10px; }
@@ -238,6 +289,10 @@ section { padding: 26px 20px; } .entry { grid-template-columns: 1fr; gap: 5px; }
 .section-heading > a { font-size: 12px; }
 .skills div { grid-template-columns: 1fr; gap: 2px; padding-block: 8px; }
 footer { padding: 24px 20px; }
+}
+@media (max-width: 400px) {
+.progress-stats { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+.progress-stats > div + div { padding-top: 18px; border-top: 1px solid #e4e0d6; }
 }
 .contacts { padding-top: 50px; }
 section { padding-top: 52px; }
