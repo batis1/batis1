@@ -10,6 +10,8 @@
 		subtitle: "CS PhD Student @ USTC",
 		location: "USTC, Hefei, China",
 		email: "batis2019@gmail.com",
+		ustcEmail: "mohomerbatis120@mail.ustc.edu.cn",
+		lab: "https://mdm.wzu.edu.cn/pages/members-detail/MohammedBatis.htm",
 		x: "https://x.com/m__batis",
 		cv: "./mainCV.pdf?v=20260907",
 		github: "https://github.com/batis1",
@@ -164,12 +166,13 @@ const publications = [
     </aside>
 </div>
 <header><img src={profile.image} alt={profile.name} width="96" height="96" /><div><h1>{profile.name}</h1><p>{profile.subtitle}</p><span>{profile.location}</span></div></header>
-<div class="contacts"><a href={`mailto:${profile.email}`}>{profile.email}</a><a href={profile.scholar}>Google Scholar &nearr;</a><a href={profile.github}>GitHub &nearr;</a><a href={profile.x}>X @m__batis &nearr;</a></div>
+<div class="contacts"><a href={`mailto:${profile.email}`}>{profile.email}</a><a href={`mailto:${profile.ustcEmail}`}>{profile.ustcEmail}</a><a href={profile.scholar}>Google Scholar &nearr;</a><a href={profile.github}>GitHub &nearr;</a><a href={profile.x}>X @m__batis &nearr;</a></div>
 <section id="about" aria-labelledby="about-title">
     <h2 id="about-title">About</h2>
     <div class="about-topic">
         <h3>Research</h3>
         <p class="intro">I study the <strong>mechanistic interpretability of language-only LLMs</strong>, combining game-theoretic interactions with causal analysis to understand how model components jointly shape behavior.</p>
+        <p class="intro"><a href={profile.lab}>Lab page &nearr;</a></p>
     </div>
     <div class="about-topic">
         <h3>Design & engineering</h3>
