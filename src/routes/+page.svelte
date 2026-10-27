@@ -1,5 +1,7 @@
 <script lang="ts">
     import { base } from '$app/paths';
+    import hardwareChip from '$lib/assets/hardware-chip.webp';
+    import profilePicture from '$lib/assets/profile-picture.webp';
 	const bodyProgress = {
 		months: 3,
 		weight: { before: 85, after: 69 },
@@ -13,10 +15,10 @@
 		ustcEmail: "mohomerbatis120@mail.ustc.edu.cn",
 		lab: "https://mdm.wzu.edu.cn/pages/members-detail/MohammedBatis.htm",
 		x: "https://x.com/m__batis",
-		cv: "./mainCV.pdf?v=20261027-2",
+		cv: `${base}/mainCV.pdf?v=20261027-2`,
 		github: "https://github.com/batis1",
 		scholar: "https://scholar.google.com/citations?user=7lz2lbUAAAAJ&hl=en",
-		image: "./profile_picture.jpg",
+		image: profilePicture,
 	};
 
 	const education = [
@@ -152,7 +154,7 @@ const publications = [
 <nav aria-label="CV navigation"><a class="monogram" href="#cv">MB</a><div><a href="#publications">Publications</a><a href="#projects">Projects</a><a href="#education">Education</a><a href={profile.cv}>CV PDF</a></div></nav>
 <div class="personal-banner">
     <figure class="hardware-photo">
-        <img src={`${base}/hardware-chip.png`} alt="Angled view of an AI accelerator chip with a dense compute array and gold interconnects" width="435" height="261" fetchpriority="high" />
+        <img src={hardwareChip} alt="Angled view of an AI accelerator chip with a dense compute array and gold interconnects" width="435" height="261" fetchpriority="high" />
     </figure>
 </div>
 <header><img src={profile.image} alt={profile.name} width="96" height="96" /><div><h1>{profile.name}</h1><p>{profile.subtitle}</p><span>{profile.location}</span></div></header>
