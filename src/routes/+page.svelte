@@ -141,7 +141,7 @@ const publications = [
 	];
 </script>
 <svelte:head>
-<title>Mohammed Batis - Research & CV</title>
+<title>MB CV</title>
 <meta name="description" content="Mohammed Batis, CS PhD student at USTC. Mechanistic interpretability, machine learning, and optimization. Publications, education, and projects." />
 </svelte:head>
 <a class="skip" href="#about">Skip to content</a>
