@@ -25,7 +25,7 @@
 			degree: "PhD Computer Science and Technology",
 			school: "University of Science and Technology of China",
 			location: "Hefei, China",
-			detail: "Withdrawn",
+			detail: "Voluntary Withdrawn",
 		},
 		{
 			date: "2022 - 2025",
@@ -180,6 +180,8 @@ const publications = [
     <h2 id="hobbies-title">Hobbies</h2>
     <h3>Going to the gym</h3>
     <p class="hobby-detail">In {bodyProgress.months} months, I went from {bodyProgress.weight.before} to {bodyProgress.weight.after} kg and reduced my body fat from {bodyProgress.bodyFat.before}% to {bodyProgress.bodyFat.after}%.</p>
+    <h3 class="hobby-heading">Typing</h3>
+    <p class="hobby-detail">My current typing speed is about 70 words per minute.</p>
 </section>
 <footer><span>Mohammed Batis</span><a href={profile.cv}>Download CV PDF &darr;</a><a href="#cv">Back to top &uarr;</a></footer>
 </main>
@@ -205,6 +207,7 @@ nav div { display: flex; flex-wrap: wrap; gap: 8px 24px; }
 .hardware-photo { margin: 0; padding: 20px 8px; min-width: 0; }
 .hardware-photo img { display: block; width: 100%; max-width: 435px; margin-inline: auto; height: auto; aspect-ratio: 435 / 261; object-fit: contain; }
 .hobby-detail { margin: 8px 0 0; font-size: 14px; color: #70665e; text-wrap: pretty; }
+.hobby-heading { margin-top: 24px; }
 header { display: flex; align-items: center; gap: 24px; padding: 48px 32px 32px; }
 header img { width: 96px; height: 96px; flex-shrink: 0; border-radius: 50%; object-fit: cover; object-position: center top; mix-blend-mode: multiply; border: 1px solid #e4e0d6; }
 h1 { font-size: 30px; line-height: 1.2; font-weight: 600; margin: 0 0 8px; text-wrap: balance; }
