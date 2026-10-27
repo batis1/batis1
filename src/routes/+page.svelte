@@ -184,7 +184,7 @@ const publications = [
     <h3>Going to the gym</h3>
     <p class="hobby-detail">In {bodyProgress.months} months, I went from {bodyProgress.weight.before} to {bodyProgress.weight.after} kg and reduced my body fat from {bodyProgress.bodyFat.before}% to {bodyProgress.bodyFat.after}%.</p>
     <h3 class="hobby-heading">Typing</h3>
-    <p class="hobby-detail">My current typing speed is about 70 words per minute.</p>
+    <p class="hobby-detail">I learned touch typing on <a href="https://www.typingclub.com/">TypingClub</a>, spending about 72 hours over a year and a half to complete the course. My current typing speed is about 70 words per minute.</p>
 </section>
 <footer><span>Mohammed Batis</span><a href={profile.cv}>Download CV PDF &darr;</a><a href="#cv">Back to top &uarr;</a></footer>
 </main>
