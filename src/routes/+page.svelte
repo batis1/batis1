@@ -13,7 +13,7 @@
 		ustcEmail: "mohomerbatis120@mail.ustc.edu.cn",
 		lab: "https://mdm.wzu.edu.cn/pages/members-detail/MohammedBatis.htm",
 		x: "https://x.com/m__batis",
-		cv: "./mainCV.pdf?v=20261027",
+		cv: "./mainCV.pdf?v=20261027-2",
 		github: "https://github.com/batis1",
 		scholar: "https://scholar.google.com/citations?user=7lz2lbUAAAAJ&hl=en",
 		image: "./profile_picture.jpg",
@@ -92,9 +92,9 @@ const publications = [
 		},
 		{
 			date: "2026 - Present",
-			title: "Wonder TOEFL: Interactive TOEFL Practice Platform",
+			title: "Win TOEFL: Interactive TOEFL Practice Platform",
 			detail: "A comprehensive TOEFL practice platform with reading, listening, speaking, and writing exercises, full-length tests, progress tracking, and vocabulary tools.",
-			link: "https://wondertoefl.vercel.app/reading",
+			link: "https://wintoefl.vercel.app/reading",
 		},
 		{
 			date: "2026 - Present",
