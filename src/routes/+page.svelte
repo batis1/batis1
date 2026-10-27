@@ -25,7 +25,7 @@
 			degree: "PhD Computer Science and Technology",
 			school: "University of Science and Technology of China",
 			location: "Hefei, China",
-			detail: "",
+			detail: "Withdrawn",
 		},
 		{
 			date: "2022 - 2025",
