@@ -56,6 +56,7 @@ const publications = [
         "title": "Random differential RIME optimization for multi-threshold segmentation in dermoscopic skin cancer images",
         "authors": "M. Batis, Q. Shao, L. Liu, A. A. Heidari, H. Chen",
         "venue": "Biomedical Signal Processing and Control, 123, 110533",
+        "journalMetrics": { "impactFactor": 5.7, "quartile": "Q2", "year": 2025, "source": "https://www.iit.comillas.edu/publicacion/info_revista/en/550/Biomedical_Signal_Processing_and_Control" },
         "citations": 0,
         "link": "https://www.sciencedirect.com/science/article/pii/S1746809426010876",
         "citationLink": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7lz2lbUAAAAJ&citation_for_view=7lz2lbUAAAAJ:IjCSPb-OGe4C"
@@ -65,6 +66,7 @@ const publications = [
         "title": "Prey capture enhanced Harris hawks optimizer for wrapper-based feature selection in high-dimensional medical data",
         "authors": "M. Batis, Y. Chen, L. Liu, A. A. Heidari, H. Chen",
         "venue": "Computer Methods and Programs in Biomedicine, 109237",
+        "journalMetrics": { "impactFactor": 6.4, "quartile": "Q1", "year": 2025, "source": "https://www.library.sk/arl-sav/en/detail/?idx=sav_un_epca%2A048089&iset=1" },
         "citations": 3,
         "link": "https://www.sciencedirect.com/science/article/pii/S0169260726000052",
         "citationLink": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13749162886429041367"
@@ -74,6 +76,7 @@ const publications = [
         "title": "ACGRIME: adaptive chaotic Gaussian RIME optimizer for global optimization and feature selection",
         "authors": "M. Batis, Y. Chen, M. Wang, L. Liu, A. A. Heidari, H. Chen",
         "venue": "Cluster Computing, 28(1), 61",
+        "journalMetrics": { "impactFactor": 5.5, "quartile": "Q1", "year": 2025, "source": "https://dizin.docent.com.tr/en/dergiler/13867857" },
         "citations": 21,
         "link": "https://link.springer.com/article/10.1007/s10586-024-04716-9",
         "citationLink": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13203526887198718385"
@@ -170,7 +173,7 @@ const publications = [
 <div class="section-heading"><h2 id="publications-title">Publications</h2><a href={profile.scholar}>Google Scholar &nearr;</a></div>
 <dl class="metrics"><div><dt>Citations</dt><dd>24</dd></div><div><dt>h-index</dt><dd>2</dd></div></dl>
 <p class="source">Google Scholar &middot; Updated October 27, 2026</p>
-{#each publications as publication}<article class="entry publication"><div class="date">{publication.year}</div><div><h3><a href={publication.link}>{publication.title} <span aria-hidden="true">&nearr;</span></a></h3><p class="muted">{publication.authors}</p><p class="muted">{publication.venue}</p><a class="citation" href={publication.citationLink}>{publication.citations} citations</a></div></article>{/each}
+{#each publications as publication}<article class="entry publication"><div class="date">{publication.year}</div><div><h3><a href={publication.link}>{publication.title} <span aria-hidden="true">&nearr;</span></a></h3><p class="muted">{publication.authors}</p><p class="muted">{publication.venue}</p><p class="muted"><a href={publication.journalMetrics.source}>Impact factor: {publication.journalMetrics.impactFactor} &middot; JCR {publication.journalMetrics.quartile} ({publication.journalMetrics.year})</a></p><a class="citation" href={publication.citationLink}>{publication.citations} citations</a></div></article>{/each}
 </section>
 <section id="education" aria-labelledby="education-title"><h2 id="education-title">Education</h2>{#each education as item}<article class="entry"><div class="date">{item.date}</div><div><h3>{item.degree}</h3><p>{item.school}</p><p class="muted">{item.location}</p>{#if item.detail}<p class="detail">{item.detail}</p>{/if}</div></article>{/each}</section>
 <section id="projects" aria-labelledby="projects-title"><h2 id="projects-title">Projects</h2>{#each projects as project}<article class="entry"><div class="date">{project.date}</div><div><h3><a href={project.link}>{project.title} &nearr;</a></h3><p class="detail">{project.detail}</p></div></article>{/each}</section>
