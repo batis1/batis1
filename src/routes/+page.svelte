@@ -13,7 +13,7 @@
 		ustcEmail: "mohomerbatis120@mail.ustc.edu.cn",
 		lab: "https://mdm.wzu.edu.cn/pages/members-detail/MohammedBatis.htm",
 		x: "https://x.com/m__batis",
-		cv: "./mainCV.pdf?v=20260907",
+		cv: "./mainCV.pdf?v=20261027",
 		github: "https://github.com/batis1",
 		scholar: "https://scholar.google.com/citations?user=7lz2lbUAAAAJ&hl=en",
 		image: "./profile_picture.jpg",
