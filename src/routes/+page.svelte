@@ -160,8 +160,8 @@ const publications = [
         <p class="intro"><a href={profile.lab}>Lab page &nearr;</a></p>
     </div>
     <div class="about-topic">
-        <h3>Design & engineering</h3>
-        <p class="intro">I enjoy design engineering, logic, and ideation, with a broad interest in how ideas become thoughtfully designed systems. I am currently reading about <strong>AI accelerator hardware</strong>, chip limitations, and the design decisions shaped by those constraints.</p>
+        <h3>AI hardware</h3>
+        <p class="intro">I am exploring <strong>AI accelerator hardware</strong>, particularly architectures that reduce unnecessary computation, memory use, and energy consumption.</p>
     </div>
 </section>
 <section id="publications" aria-labelledby="publications-title">
