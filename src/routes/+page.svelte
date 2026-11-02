@@ -1,6 +1,5 @@
 <script lang="ts">
     import { base } from '$app/paths';
-    import hardwareChip from '$lib/assets/hardware-chip.webp';
     import profilePicture from '$lib/assets/profile-picture.webp';
 	const bodyProgress = {
 		months: 3,
@@ -152,11 +151,6 @@ const publications = [
 <a class="skip" href="#about">Skip to content</a>
 <main id="cv">
 <nav aria-label="CV navigation"><a class="monogram" href="#cv">MB</a><div><a href="#publications">Publications</a><a href="#projects">Projects</a><a href="#education">Education</a><a href={profile.cv}>CV PDF</a></div></nav>
-<div class="personal-banner">
-    <figure class="hardware-photo">
-        <img src={hardwareChip} alt="Angled view of an AI accelerator chip with a dense compute array and gold interconnects" width="435" height="261" fetchpriority="high" />
-    </figure>
-</div>
 <header><img src={profile.image} alt={profile.name} width="96" height="96" /><div><h1>{profile.name}</h1><p>{profile.subtitle}</p><span>{profile.location}</span></div></header>
 <div class="contacts"><a href={`mailto:${profile.email}`}>{profile.email}</a><a href={`mailto:${profile.ustcEmail}`}>{profile.ustcEmail}</a><a href={profile.scholar}>Google Scholar &nearr;</a><a href={profile.github}>GitHub &nearr;</a><a href={profile.x}>X @m__batis &nearr;</a></div>
 <section id="about" aria-labelledby="about-title">
@@ -208,9 +202,6 @@ main::after { right: 16px; }
 nav { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; min-height: 64px; padding: 16px 32px; font-size: 13px; }
 nav div { display: flex; flex-wrap: wrap; gap: 8px 24px; }
 .monogram { font-weight: 700; font-size: 16px; }
-.personal-banner { margin: 0 16px; border-block: 1px solid #e4e0d6; }
-.hardware-photo { margin: 0; padding: 20px 8px; min-width: 0; }
-.hardware-photo img { display: block; width: 100%; max-width: 435px; margin-inline: auto; height: auto; aspect-ratio: 435 / 261; object-fit: contain; }
 .hobby-detail { margin: 8px 0 0; font-size: 14px; color: #70665e; text-wrap: pretty; }
 .hobby-heading { margin-top: 24px; }
 header { display: flex; align-items: center; gap: 24px; padding: 48px 32px 32px; }
@@ -256,14 +247,10 @@ h3 { font-size: 16px; line-height: 1.5; font-weight: 600; margin: 0 0 5px; text-
 .skills dt { color: #70665e; }
 .skills dd { margin: 0; }
 footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding: 24px 32px; font-size: 12px; color: #70665e; }
-@media (max-width: 680px) {
-.hardware-photo { padding: 16px 20px; }
-}
 @media (max-width: 560px) {
 main::before { left: 4px; }
 main::after { right: 4px; }
 nav { padding: 16px 20px; } nav div { gap: 16px; }
-.personal-banner { margin-inline: 4px; }
 header { padding: 32px 20px 24px; gap: 16px; } header img { width: 72px; height: 72px; }
 h1 { font-size: 24px; } header p { font-size: 14px; } header span { font-size: 13px; }
 .contacts { padding: 18px 20px; grid-template-columns: 1fr; gap: 10px; }
