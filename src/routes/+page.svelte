@@ -156,7 +156,7 @@ const publications = [
     <h2 id="about-title">About</h2>
     <div class="about-topic">
         <h3>Research</h3>
-        <p class="intro">I study the <strong>mechanistic interpretability of language-only LLMs</strong>, combining game-theoretic interactions with causal analysis to understand how model components jointly shape behavior.</p>
+        <p class="intro">I study the <strong>mechanistic interpretability of language-only LLMs</strong>.</p>
         <p class="intro"><a href={profile.lab}>Lab page &nearr;</a></p>
     </div>
     <div class="about-topic">
