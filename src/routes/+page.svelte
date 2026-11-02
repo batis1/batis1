@@ -11,7 +11,6 @@
 		subtitle: "CS PhD Student @ USTC",
 		location: "USTC, Hefei, China",
 		email: "batis2019@gmail.com",
-		ustcEmail: "mohomerbatis120@mail.ustc.edu.cn",
 		lab: "https://mdm.wzu.edu.cn/pages/members-detail/MohammedBatis.htm",
 		x: "https://x.com/m__batis",
 		cv: `${base}/mainCV.pdf?v=20261027-2`,
@@ -152,7 +151,7 @@ const publications = [
 <main id="cv">
 <nav aria-label="CV navigation"><a class="monogram" href="#cv">MB</a><div><a href="#publications">Publications</a><a href="#projects">Projects</a><a href="#education">Education</a><a href={profile.cv}>CV PDF</a></div></nav>
 <header><img src={profile.image} alt={profile.name} width="96" height="96" /><div><h1>{profile.name}</h1><p>{profile.subtitle}</p><span>{profile.location}</span></div></header>
-<div class="contacts"><a href={`mailto:${profile.email}`}>{profile.email}</a><a href={`mailto:${profile.ustcEmail}`}>{profile.ustcEmail}</a><a href={profile.scholar}>Google Scholar &nearr;</a><a href={profile.github}>GitHub &nearr;</a><a href={profile.x}>X @m__batis &nearr;</a></div>
+<div class="contacts"><a href={`mailto:${profile.email}`}>{profile.email}</a><a href={profile.scholar}>Google Scholar &nearr;</a><a href={profile.github}>GitHub &nearr;</a><a href={profile.x}>X @m__batis &nearr;</a></div>
 <section id="about" aria-labelledby="about-title">
     <h2 id="about-title">About</h2>
     <div class="about-topic">
