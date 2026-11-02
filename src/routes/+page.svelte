@@ -4,7 +4,7 @@
 	const bodyProgress = {
 		months: 3,
 		weight: { before: 85, after: 69 },
-		bodyFat: { before: 27, after: 15 },
+		bodyFat: { before: 27, after: 14 },
 	};
 	const profile = {
 		name: "Mohammed Batis",
@@ -176,10 +176,23 @@ const publications = [
 <section aria-labelledby="skills-title"><h2 id="skills-title">Skills & languages</h2><dl class="skills">{#each skillGroups as group}<div><dt>{group.category}</dt><dd>{group.skills}</dd></div>{/each}</dl></section>
 <section id="hobbies" aria-labelledby="hobbies-title">
     <h2 id="hobbies-title">Hobbies</h2>
-    <h3>Going to the gym</h3>
-    <p class="hobby-detail">In {bodyProgress.months} months, I went from {bodyProgress.weight.before} to {bodyProgress.weight.after} kg and reduced my body fat from {bodyProgress.bodyFat.before}% to {bodyProgress.bodyFat.after}%.</p>
-    <h3 class="hobby-heading">Typing</h3>
-    <p class="hobby-detail">I learned touch typing on <a href="https://www.typingclub.com/">TypingClub</a>, spending about 72 hours over a year and a half to complete the course. My current typing speed is about 70 words per minute.</p>
+    <div class="hobby">
+        <span class="hobby-icon" aria-hidden="true">&#x1F3CB;&#xFE0F;</span>
+        <div>
+            <h3>Gym <span class="hobby-note">{bodyProgress.months} months</span></h3>
+            <dl class="hobby-stats">
+                <div><dt>Weight</dt><dd>{bodyProgress.weight.before} &rarr; {bodyProgress.weight.after} kg</dd></div>
+                <div><dt>Body fat</dt><dd>{bodyProgress.bodyFat.before}% &rarr; {bodyProgress.bodyFat.after}%</dd></div>
+            </dl>
+        </div>
+    </div>
+    <div class="hobby">
+        <span class="hobby-icon" aria-hidden="true">&#x2328;&#xFE0F;</span>
+        <div>
+            <h3>Touch typing <span class="typing-speed">~70 WPM</span></h3>
+            <p class="hobby-detail"><a href="https://www.typingclub.com/">TypingClub</a> completed &middot; 72 hours of practice over 18 months</p>
+        </div>
+    </div>
 </section>
 <footer><span>Mohammed Batis</span><a href={profile.cv}>Download CV PDF &darr;</a><a href="#cv">Back to top &uarr;</a></footer>
 </main>
@@ -201,8 +214,16 @@ main::after { right: 16px; }
 nav { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; min-height: 64px; padding: 16px 32px; font-size: 13px; }
 nav div { display: flex; flex-wrap: wrap; gap: 8px 24px; }
 .monogram { font-weight: 700; font-size: 16px; }
-.hobby-detail { margin: 8px 0 0; font-size: 14px; color: #70665e; text-wrap: pretty; }
-.hobby-heading { margin-top: 24px; }
+.hobby { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 12px; }
+.hobby + .hobby { margin-top: 24px; }
+.hobby-icon { font-size: 22px; line-height: 28px; }
+.hobby h3 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px; }
+.hobby-note { font-size: 12px; font-weight: 400; color: #70665e; }
+.hobby-stats { display: flex; flex-wrap: wrap; gap: 12px 32px; margin: 8px 0 0; font-size: 14px; }
+.hobby-stats dt { font-size: 12px; color: #70665e; }
+.hobby-stats dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+.typing-speed { font-size: 14px; color: #326b85; font-variant-numeric: tabular-nums; }
+.hobby-detail { margin: 6px 0 0; font-size: 14px; color: #70665e; text-wrap: pretty; }
 header { display: flex; align-items: center; gap: 24px; padding: 48px 32px 32px; }
 header img { width: 96px; height: 96px; flex-shrink: 0; border-radius: 50%; object-fit: cover; object-position: center top; mix-blend-mode: multiply; border: 1px solid #e4e0d6; }
 h1 { font-size: 30px; line-height: 1.2; font-weight: 600; margin: 0 0 8px; text-wrap: balance; }
