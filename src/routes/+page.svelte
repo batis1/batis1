@@ -189,7 +189,7 @@ const publications = [
     <div class="hobby">
         <span class="hobby-icon" aria-hidden="true">&#x2328;&#xFE0F;</span>
         <div>
-            <h3>Touch typing <span class="typing-speed">~70 WPM</span></h3>
+            <h3>Touch typing <span class="typing-speed">~75 WPM</span></h3>
             <p class="hobby-detail"><a href="https://www.typingclub.com/">TypingClub</a> completed &middot; 72 hours of practice over 18 months</p>
         </div>
     </div>
