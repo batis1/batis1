@@ -186,13 +186,6 @@ const publications = [
             </dl>
         </div>
     </div>
-    <div class="hobby">
-        <span class="hobby-icon" aria-hidden="true">&#x2328;&#xFE0F;</span>
-        <div>
-            <h3>Touch typing <span class="typing-speed">~75 WPM</span></h3>
-            <p class="hobby-detail"><a href="https://www.typingclub.com/">TypingClub</a> completed &middot; 72 hours of practice over 18 months</p>
-        </div>
-    </div>
 </section>
 <footer><span>Mohammed Batis</span><a href={profile.cv}>Download CV PDF &darr;</a><a href="#cv">Back to top &uarr;</a></footer>
 </main>
@@ -215,15 +208,12 @@ nav { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justi
 nav div { display: flex; flex-wrap: wrap; gap: 8px 24px; }
 .monogram { font-weight: 700; font-size: 16px; }
 .hobby { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 12px; }
-.hobby + .hobby { margin-top: 24px; }
 .hobby-icon { font-size: 22px; line-height: 28px; }
 .hobby h3 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px; }
 .hobby-note { font-size: 12px; font-weight: 400; color: #70665e; }
 .hobby-stats { display: flex; flex-wrap: wrap; gap: 12px 32px; margin: 8px 0 0; font-size: 14px; }
 .hobby-stats dt { font-size: 12px; color: #70665e; }
 .hobby-stats dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
-.typing-speed { font-size: 14px; color: #326b85; font-variant-numeric: tabular-nums; }
-.hobby-detail { margin: 6px 0 0; font-size: 14px; color: #70665e; text-wrap: pretty; }
 header { display: flex; align-items: center; gap: 24px; padding: 48px 32px 32px; }
 header img { width: 96px; height: 96px; flex-shrink: 0; border-radius: 50%; object-fit: cover; object-position: center top; mix-blend-mode: multiply; border: 1px solid #e4e0d6; }
 h1 { font-size: 30px; line-height: 1.2; font-weight: 600; margin: 0 0 8px; text-wrap: balance; }
