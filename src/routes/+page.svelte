@@ -13,7 +13,7 @@
 		email: "batis2019@gmail.com",
 		lab: "https://mdm.wzu.edu.cn/pages/members-detail/MohammedBatis.htm",
 		x: "https://x.com/m__batis",
-		cv: `${base}/mainCV.pdf?v=20261027-2`,
+		cv: `${base}/mainCV.pdf?v=20261117-1`,
 		github: "https://github.com/batis1",
 		scholar: "https://scholar.google.com/citations?user=7lz2lbUAAAAJ&hl=en",
 		image: profilePicture,
@@ -77,7 +77,7 @@ const publications = [
         "authors": "M. Batis, Y. Chen, M. Wang, L. Liu, A. A. Heidari, H. Chen",
         "venue": "Cluster Computing, 28(1), 61",
         "journalMetrics": { "impactFactor": 5.5, "quartile": "Q1", "year": 2025, "source": "https://dizin.docent.com.tr/en/dergiler/13867857" },
-        "citations": 21,
+        "citations": 22,
         "link": "https://link.springer.com/article/10.1007/s10586-024-04716-9",
         "citationLink": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13203526887198718385"
     }
@@ -166,8 +166,8 @@ const publications = [
 </section>
 <section id="publications" aria-labelledby="publications-title">
 <div class="section-heading"><h2 id="publications-title">Publications</h2><a href={profile.scholar}>Google Scholar &nearr;</a></div>
-<dl class="metrics"><div><dt>Citations</dt><dd>24</dd></div><div><dt>h-index</dt><dd>2</dd></div></dl>
-<p class="source">Google Scholar &middot; Updated October 27, 2026</p>
+<dl class="metrics"><div><dt>Citations</dt><dd>25</dd></div><div><dt>h-index</dt><dd>2</dd></div></dl>
+<p class="source">Google Scholar &middot; Updated November 17, 2026</p>
 {#each publications as publication}<article class="entry publication"><div class="date">{publication.year}</div><div><h3><a href={publication.link}>{publication.title} <span aria-hidden="true">&nearr;</span></a></h3><p class="muted">{publication.authors}</p><p class="muted">{publication.venue}</p><p class="muted"><a href={publication.journalMetrics.source}>Impact factor: {publication.journalMetrics.impactFactor} &middot; JCR {publication.journalMetrics.quartile} ({publication.journalMetrics.year})</a></p><a class="citation" href={publication.citationLink}>{publication.citations} citations</a></div></article>{/each}
 </section>
 <section id="education" aria-labelledby="education-title"><h2 id="education-title">Education</h2>{#each education as item}<article class="entry"><div class="date">{item.date}</div><div><h3>{item.degree}</h3><p>{item.school}</p><p class="muted">{item.location}</p>{#if item.detail}<p class="detail">{item.detail}</p>{/if}</div></article>{/each}</section>
