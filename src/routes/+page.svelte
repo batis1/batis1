@@ -13,7 +13,7 @@
 		email: "batis2019@gmail.com",
 		lab: "https://mdm.wzu.edu.cn/pages/members-detail/MohammedBatis.htm",
 		x: "https://x.com/m__batis",
-		cv: `${base}/mainCV.pdf?v=20261117-2`,
+		cv: `${base}/mainCV.pdf?v=20261117-3`,
 		github: "https://github.com/batis1",
 		scholar: "https://scholar.google.com/citations?user=7lz2lbUAAAAJ&hl=en",
 		image: profilePicture,
@@ -156,9 +156,7 @@ const publications = [
     <h2 id="about-title">About</h2>
     <div class="about-topic">
         <h3>Research interests</h3>
-        <p class="intro">My research interests are in <strong>computer security and privacy</strong>, particularly applied and theoretical cryptography, secure authentication, and defenses against technology-facilitated abuse. I am interested in committing authenticated encryption, abuse reporting in end-to-end encrypted messaging, and preventing information leakage from encrypted applications.</p>
-        <p class="intro">I want to explore the security and usability of passwords, passkeys, and account recovery, especially under interpersonal threats such as intimate partner surveillance and coercive control. I am also interested in machine learning security and privacy, including model inversion, model extraction, training-data leakage, and adversarial manipulation of LLM routing.</p>
-        <p class="intro">I aim to combine formal security analysis, empirical evaluation, and practical system design to develop protections that address real-world attacks and the needs of at-risk users.</p>
+        <p class="intro">My interests span <strong>computer security and privacy</strong>: committing encryption, leakage in encrypted applications, authentication under interpersonal threats, and ML confidentiality and integrity. I aim to connect formal security guarantees with practical defenses for deployed systems.</p>
         <p class="intro"><a href={profile.lab}>Lab page &nearr;</a></p>
     </div>
 </section>
