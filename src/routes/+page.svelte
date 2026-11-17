@@ -13,7 +13,7 @@
 		email: "batis2019@gmail.com",
 		lab: "https://mdm.wzu.edu.cn/pages/members-detail/MohammedBatis.htm",
 		x: "https://x.com/m__batis",
-		cv: `${base}/mainCV.pdf?v=20261117-3`,
+		cv: `${base}/mainCV.pdf?v=20261117-4`,
 		github: "https://github.com/batis1",
 		scholar: "https://scholar.google.com/citations?user=7lz2lbUAAAAJ&hl=en",
 		image: profilePicture,
@@ -156,7 +156,7 @@ const publications = [
     <h2 id="about-title">About</h2>
     <div class="about-topic">
         <h3>Research interests</h3>
-        <p class="intro">My interests span <strong>computer security and privacy</strong>: committing encryption, leakage in encrypted applications, authentication under interpersonal threats, and ML confidentiality and integrity. I aim to connect formal security guarantees with practical defenses for deployed systems.</p>
+        <p class="intro">My interests are <strong>computer security and privacy</strong>: committing encryption, leakage in encrypted applications, authentication under interpersonal threats, and ML confidentiality and integrity. I aim to connect formal security guarantees with practical defenses for deployed systems.</p>
         <p class="intro"><a href={profile.lab}>Lab page &nearr;</a></p>
     </div>
 </section>
